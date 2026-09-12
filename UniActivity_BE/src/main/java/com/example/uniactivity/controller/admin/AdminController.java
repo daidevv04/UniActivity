@@ -17,7 +17,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -37,28 +36,6 @@ public class AdminController {
     private final NotificationService notificationService;
     private final TrainingPointService trainingPointService;
     private final UserRepository userRepository;
-
-    @GetMapping("/dashboard")
-    public String dashboard(Model model) {
-        // Main statistics cards
-        model.addAttribute("totalFaculties", facultyService.countFaculties());
-        model.addAttribute("totalClasses", studentClassService.countClasses());
-        model.addAttribute("totalStudents", userManagementService.countStudents());
-        model.addAttribute("totalUsers", userManagementService.countAllUsers());
-        model.addAttribute("totalAcademicYears", academicYearService.countAcademicYears());
-        model.addAttribute("totalActivities", activityService.countActivities());
-        model.addAttribute("activeActivities", activityService.countActiveActivities());
-        model.addAttribute("totalSemesters", semesterService.countSemesters());
-        
-        // Detail lists for breakdown view
-        model.addAttribute("faculties", facultyService.getActiveFaculties());
-        model.addAttribute("recentActivities", activityService.getRecentActivities(5));
-        model.addAttribute("classes", studentClassService.getAllClasses());
-        model.addAttribute("currentSemester", semesterService.getCurrentSemester());
-        
-        return "admin/dashboard";
-    }
-
     // ===== REST API cho React Frontend =====
     @GetMapping("/api/dashboard-stats")
     @ResponseBody

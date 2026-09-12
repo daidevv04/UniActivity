@@ -15,7 +15,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -35,63 +34,6 @@ public class ActivityController {
     private final StudentClassService studentClassService;
     private final ScoringRulesService scoringRulesService;
     private final FileUploadService fileUploadService;
-
-    @GetMapping
-    public String listActivities(Model model) {
-        model.addAttribute("activities", activityService.getAllActivities());
-        model.addAttribute("semesters", semesterService.getAllSemesters());
-        model.addAttribute("scopes", ActivityScope.values());
-        model.addAttribute("statuses", ActivityStatus.values());
-        model.addAttribute("scoringRulesJson", scoringRulesService.getScoringRules().toString());
-        // For ActivitySlot modal
-        model.addAttribute("faculties", facultyService.getActiveFaculties());
-        model.addAttribute("academicYears", academicYearService.getActiveAcademicYears());
-        model.addAttribute("classes", studentClassService.getAllClasses());
-        return "admin/activity-list";
-    }
-    
-    @GetMapping("/{id}")
-    public String viewActivityDetail(@PathVariable Long id, Model model) {
-        var activity = activityService.getActivityById(id);
-        var slots = activityService.getSlotsByActivity(id);
-        
-        model.addAttribute("activity", activity);
-        model.addAttribute("slots", slots);
-        model.addAttribute("scoreOptions", activityService.getScoreOptionsByActivity(id));
-        
-        // Calculate slot statistics
-        int totalMaxSlots = slots.stream().mapToInt(s -> s.getMaxQuantity() != null ? s.getMaxQuantity() : 0).sum();
-        int totalRegistered = slots.stream().mapToInt(s -> s.getCurrentQuantity() != null ? s.getCurrentQuantity() : 0).sum();
-        int totalRemaining = totalMaxSlots - totalRegistered;
-        
-        model.addAttribute("totalMaxSlots", totalMaxSlots);
-        model.addAttribute("totalRegistered", totalRegistered);
-        model.addAttribute("totalRemaining", totalRemaining);
-        
-        // Check deadline
-        boolean isDeadlinePassed = activity.getRegistrationDeadline() != null 
-            && activity.getRegistrationDeadline().isBefore(java.time.LocalDateTime.now());
-        model.addAttribute("isDeadlinePassed", isDeadlinePassed);
-        
-        // For editing
-        model.addAttribute("scopes", ActivityScope.values());
-        model.addAttribute("statuses", ActivityStatus.values());
-        model.addAttribute("scoringRulesJson", scoringRulesService.getScoringRules().toString());
-        model.addAttribute("faculties", facultyService.getActiveFaculties());
-        model.addAttribute("classes", studentClassService.getAllClasses());
-        return "admin/activity-detail";
-    }
-    
-    @GetMapping("/create")
-    public String createActivityWizard(Model model) {
-        model.addAttribute("scopes", ActivityScope.values());
-        model.addAttribute("statuses", ActivityStatus.values());
-        model.addAttribute("scoringRulesJson", scoringRulesService.getScoringRules().toString());
-        model.addAttribute("faculties", facultyService.getActiveFaculties());
-        model.addAttribute("classes", studentClassService.getAllClasses());
-        return "admin/activity-create";
-    }
-
     // ========== Activity REST API ==========
 
     @GetMapping("/api")

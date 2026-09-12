@@ -9,7 +9,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URLEncoder;
@@ -26,15 +25,6 @@ import java.time.format.DateTimeFormatter;
 public class ManagerReportController {
 
     private final ReportService reportService;
-
-    @GetMapping("/reports")
-    public String reports(@AuthenticationPrincipal CustomUserDetails userDetails, Model model) {
-        User currentUser = userDetails.getUser();
-        model.addAttribute("user", currentUser);
-        model.addAttribute("studentClass", currentUser.getStudentClass());
-        return "manager/reports";
-    }
-
     // ========== REPORTS API ==========
 
     @GetMapping("/api/reports/members")

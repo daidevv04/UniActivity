@@ -134,7 +134,7 @@ export default function AdminDashboard() {
       return
     }
     setLoadingAll(true)
-    fetch('/admin/activities/api/list', {
+    fetch(`/admin/activities/api?page=0&size=${stats?.totalActivities || 100}`, {
       credentials: 'include',
       headers: { 'Accept': 'application/json' },
     })
@@ -143,7 +143,7 @@ export default function AdminDashboard() {
         return res.json()
       })
       .then((data) => {
-        setAllActivities(data)
+        setAllActivities(data.content || data)
         setShowAllActivities(true)
         setLoadingAll(false)
       })

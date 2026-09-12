@@ -7,7 +7,6 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,13 +17,6 @@ import java.util.List;
 public class SemesterController {
 
     private final SemesterService semesterService;
-
-    @GetMapping
-    public String listSemesters(Model model) {
-        model.addAttribute("semesters", semesterService.getAllSemesters());
-        return "admin/semester-list";
-    }
-
     // ========== REST API ==========
 
     @GetMapping("/api")

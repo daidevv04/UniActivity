@@ -121,6 +121,7 @@ export default function Checkin() {
                 if (!reg) setCheckinState('not_registered')
                 else if (reg.status === 'ATTENDED') setCheckinState('already')
                 else if (reg.status === 'CANCELLED') setCheckinState('cancelled')
+                else if (act?.startTime && new Date(act.startTime) > new Date()) setCheckinState('not_started')
                 else setCheckinState('can_checkin')
 
                 setMode('checkin')
@@ -557,6 +558,16 @@ export default function Checkin() {
                                 <NavLink to={activitiesPath} className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 text-white font-bold rounded-xl hover:bg-emerald-600 transition-colors">
                                     <span className="material-symbols-outlined text-lg">event</span> Xem hoạt động
                                 </NavLink>
+                            </>
+                        )}
+
+                        {checkinState === 'not_started' && (
+                            <>
+                                <StateIcon icon="schedule" color="blue" />
+                                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Chưa đến giờ check-in</h3>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">
+                                    Check-in mở từ {activity?.startTime ? new Date(activity.startTime).toLocaleString('vi-VN') : 'thời gian bắt đầu hoạt động'}.
+                                </p>
                             </>
                         )}
 

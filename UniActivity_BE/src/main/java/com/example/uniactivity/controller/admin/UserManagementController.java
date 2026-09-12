@@ -13,7 +13,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,17 +27,6 @@ public class UserManagementController {
     private final StudentClassService studentClassService;
     private final FacultyService facultyService;
     private final AcademicYearService academicYearService;
-
-    @GetMapping
-    public String listUsers(Model model) {
-        model.addAttribute("users", userManagementService.getAllUsers());
-        model.addAttribute("classes", studentClassService.getAllClasses());
-        model.addAttribute("faculties", facultyService.getActiveFaculties());
-        model.addAttribute("academicYears", academicYearService.getActiveAcademicYears());
-        model.addAttribute("roles", Role.values());
-        return "admin/user-list";
-    }
-
     // ========== REST API ==========
 
     @GetMapping("/api")

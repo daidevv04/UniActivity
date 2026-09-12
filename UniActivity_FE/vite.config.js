@@ -2,6 +2,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
+
+// Backend gốc — phải khớp server.port trong UniActivity_BE/application.properties
+const BACKEND = process.env.BACKEND_URL || 'http://localhost:8080'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
@@ -10,14 +13,14 @@ export default defineConfig({
     proxy: {
       // Proxy OAuth2 callback (luôn proxy, không bypass)
       '/login/oauth2': {
-        target: 'http://localhost:8080',
+        target: BACKEND,
         changeOrigin: true,
         cookieDomainRewrite: '',
         cookiePathRewrite: '/',
       },
       // Proxy POST /login tới Spring Boot backend (chỉ POST, không GET)
       '/login': {
-        target: 'http://localhost:8080',
+        target: BACKEND,
         changeOrigin: true,
         cookieDomainRewrite: '',
         cookiePathRewrite: '/',
@@ -30,7 +33,7 @@ export default defineConfig({
       },
       // Proxy POST /register tới Spring Boot backend
       '/register': {
-        target: 'http://localhost:8080',
+        target: BACKEND,
         changeOrigin: true,
         cookieDomainRewrite: '',
         cookiePathRewrite: '/',
@@ -43,7 +46,7 @@ export default defineConfig({
       // Proxy admin API endpoints tới Spring Boot backend
       // GET requests trang admin sẽ do React SPA xử lý
       '/admin': {
-        target: 'http://localhost:8080',
+        target: BACKEND,
         changeOrigin: true,
         cookieDomainRewrite: '',
         cookiePathRewrite: '/',
@@ -55,7 +58,7 @@ export default defineConfig({
         },
       },
       '/manager': {
-        target: 'http://localhost:8080',
+        target: BACKEND,
         changeOrigin: true,
         cookieDomainRewrite: '',
         cookiePathRewrite: '/',
@@ -67,7 +70,7 @@ export default defineConfig({
         },
       },
       '/student': {
-        target: 'http://localhost:8080',
+        target: BACKEND,
         changeOrigin: true,
         cookieDomainRewrite: '',
         cookiePathRewrite: '/',
@@ -79,32 +82,32 @@ export default defineConfig({
         },
       },
       '/sse': {
-        target: 'http://localhost:8080',
+        target: BACKEND,
         changeOrigin: true,
         cookieDomainRewrite: '',
         cookiePathRewrite: '/',
       },
       '/api': {
-        target: 'http://localhost:8080',
+        target: BACKEND,
         changeOrigin: true,
         cookieDomainRewrite: '',
         cookiePathRewrite: '/',
       },
       '/oauth2': {
-        target: 'http://localhost:8080',
+        target: BACKEND,
         changeOrigin: true,
         cookieDomainRewrite: '',
         cookiePathRewrite: '/',
       },
       '/logout': {
-        target: 'http://localhost:8080',
+        target: BACKEND,
         changeOrigin: true,
         cookieDomainRewrite: '',
         cookiePathRewrite: '/',
       },
       // Proxy uploaded files (banner images, evidence, etc.)
       '/uploads': {
-        target: 'http://localhost:8080',
+        target: BACKEND,
         changeOrigin: true,
       },
     },

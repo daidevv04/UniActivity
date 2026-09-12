@@ -13,7 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,15 +26,6 @@ public class StudentClassController {
     private final FacultyService facultyService;
     private final AcademicYearService academicYearService;
     private final QrCodeService qrCodeService;
-
-    @GetMapping
-    public String listClasses(Model model) {
-        model.addAttribute("classes", studentClassService.getAllClasses());
-        model.addAttribute("faculties", facultyService.getActiveFaculties());
-        model.addAttribute("academicYears", academicYearService.getActiveAcademicYears());
-        return "admin/class-list";
-    }
-
     // ========== REST API ==========
 
     @GetMapping("/api")

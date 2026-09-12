@@ -12,6 +12,12 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.async.AsyncRequestNotUsableException;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
+import org.springframework.web.servlet.resource.NoResourceFoundException;
+
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -96,8 +102,44 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(response);
     }
 
+    /**
+     * Đường dẫn không tồn tại (thiếu static resource / sai route) phải trả 404, không phải 500.
+     */
+    @ExceptionHandler(NoResourceFoundException.class)
+    public ResponseEntity<ErrorResponse> handleNoResource(NoResourceFoundException ex) {
+        logger.warn("Resource not found: {}", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(new ErrorResponse(404, "Không tìm thấy tài nguyên", LocalDateTime.now()));
+    }
+
+    /**
+     * Gọi sai HTTP method (ví dụ GET vào route chỉ có POST) phải trả 405, không phải 500.
+     */
+    @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
+    public ResponseEntity<ErrorResponse> handleMethodNotAllowed(HttpRequestMethodNotSupportedException ex) {
+        logger.warn("Method not allowed: {}", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.METHOD_NOT_ALLOWED)
+                .body(new ErrorResponse(405, "Phương thức không được hỗ trợ", LocalDateTime.now()));
+    }
+
+    /**
+     * Path variable / query param sai kiểu (ví dụ /api/{id} nhận chuỗi không phải số) phải trả 400.
+     */
+    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
+    public ResponseEntity<ErrorResponse> handleTypeMismatch(MethodArgumentTypeMismatchException ex) {
+        logger.warn("Invalid parameter '{}': {}", ex.getName(), ex.getMessage());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                .body(new ErrorResponse(400, "Tham số không hợp lệ", LocalDateTime.now()));
+    }
+
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ErrorResponse> handleGeneral(Exception ex) {
+    public ResponseEntity<ErrorResponse> handleGeneral(Exception ex, HttpServletResponse response) throws IOException {
+        // Nếu response đã ghi (ví dụ Thymeleaf render lỗi) thì không ghi thêm — tránh
+        // HttpMessageNotWritableException che mất lỗi gốc.
+        if (response.isCommitted()) {
+            logger.error("Unexpected error after response committed", ex);
+            return null;
+        }
         logger.error("Unexpected error", ex);
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(new ErrorResponse(500, "Lỗi hệ thống, vui lòng thử lại sau", LocalDateTime.now()));

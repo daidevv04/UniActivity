@@ -7,7 +7,6 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,13 +17,6 @@ import java.util.List;
 public class AcademicYearController {
 
     private final AcademicYearService academicYearService;
-
-    @GetMapping
-    public String listAcademicYears(Model model) {
-        model.addAttribute("academicYears", academicYearService.getAllAcademicYears());
-        return "admin/academic-year-list";
-    }
-
     // ========== REST API ==========
 
     @GetMapping("/api")

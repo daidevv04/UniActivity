@@ -13,7 +13,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,45 +31,6 @@ public class ManagerMemberController {
     private final NotificationService notificationService;
     private final ManagerScopeAuthorizationService managerScopeAuthorizationService;
     private final StudentClassService studentClassService;
-
-    @GetMapping("/join-requests")
-    public String joinRequests(@AuthenticationPrincipal CustomUserDetails userDetails, Model model) {
-        User currentUser = userDetails.getUser();
-        model.addAttribute("user", currentUser);
-        model.addAttribute("studentClass", currentUser.getStudentClass());
-        
-        if (currentUser.getStudentClass() != null) {
-            List<ClassJoinRequest> pendingRequests = classJoinRequestService.getPendingRequestsForClass(currentUser.getStudentClass());
-            model.addAttribute("pendingRequests", pendingRequests);
-        }
-        
-        return "manager/join-requests";
-    }
-
-    @GetMapping("/members")
-    public String members(@AuthenticationPrincipal CustomUserDetails userDetails,
-                          @RequestParam(required = false) String search,
-                          Model model) {
-        User currentUser = userDetails.getUser();
-        model.addAttribute("user", currentUser);
-        model.addAttribute("studentClass", currentUser.getStudentClass());
-        
-        if (currentUser.getStudentClass() != null) {
-            List<User> members;
-            if (search != null && !search.isBlank()) {
-                members = userRepository.findByStudentClassAndFullNameContainingIgnoreCaseOrStudentClassAndUsernameContainingIgnoreCase(
-                    currentUser.getStudentClass(), search, currentUser.getStudentClass(), search);
-                model.addAttribute("search", search);
-            } else {
-                members = userRepository.findByStudentClass(currentUser.getStudentClass());
-            }
-            model.addAttribute("members", members);
-            model.addAttribute("memberCount", userRepository.countByStudentClass(currentUser.getStudentClass()));
-        }
-        
-        return "manager/members";
-    }
-
     // ========== API ==========
 
     @PostMapping("/api/join-requests/{id}/approve")

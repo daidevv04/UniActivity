@@ -17,7 +17,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -39,54 +38,6 @@ public class StudentCheckinController {
     private final SseEmitterService sseEmitterService;
     private final StudentCheckinService studentCheckinService;
     private final EvidenceSubmissionService evidenceSubmissionService;
-
-    @GetMapping("/checkin/{activityId}")
-    public String checkinPage(@AuthenticationPrincipal CustomUserDetails userDetails,
-                               @PathVariable Long activityId,
-                               @RequestParam(required = false) String token,
-                               @RequestParam(required = false) Long classId,
-                               Model model) {
-        // Fetch fresh user data from database
-        User currentUser = userRepository.findById(userDetails.getUser().getId())
-                .orElse(userDetails.getUser());
-        model.addAttribute("user", currentUser);
-        model.addAttribute("activityId", activityId);
-        model.addAttribute("classId", classId);
-        
-        try {
-            Activity activity = activityService.findActivityById(activityId);
-            model.addAttribute("activity", activity);
-            
-            // Check if student belongs to the same class as the QR creator
-            if (classId != null && currentUser.getStudentClass() != null) {
-                if (!currentUser.getStudentClass().getId().equals(classId)) {
-                    model.addAttribute("error", "Mã QR này chỉ dành cho lớp khác. Vui lòng sử dụng mã QR của lớp bạn.");
-                    model.addAttribute("canCheckin", false);
-                    return "student/checkin";
-                }
-            }
-            
-            // Check if already registered
-            var registration = activityRegistrationRepository.findByActivityAndStudent(activity, currentUser);
-            
-            if (registration.isEmpty()) {
-                model.addAttribute("error", "Bạn chưa đăng ký hoạt động này. Vui lòng đăng ký trước khi check-in.");
-                model.addAttribute("canCheckin", false);
-            } else if (registration.get().getStatus() == RegistrationStatus.ATTENDED) {
-                model.addAttribute("success", "Bạn đã check-in thành công trước đó!");
-                model.addAttribute("canCheckin", false);
-            } else {
-                model.addAttribute("canCheckin", true);
-                model.addAttribute("registration", registration.get());
-            }
-        } catch (Exception e) {
-            model.addAttribute("error", "Không thể tải thông tin hoạt động");
-            model.addAttribute("canCheckin", false);
-        }
-        
-        return "student/checkin";
-    }
-
     @PostMapping("/api/checkin/{activityId}")
     @ResponseBody
     public ResponseEntity<?> performCheckin(@AuthenticationPrincipal CustomUserDetails userDetails,

@@ -8,7 +8,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -28,12 +27,6 @@ public class ManagerNotificationController {
     /**
      * Trang danh sách thông báo
      */
-    @GetMapping("/notifications")
-    public String notificationsPage(@AuthenticationPrincipal CustomUserDetails userDetails, Model model) {
-        model.addAttribute("unreadCount", notificationService.getUnreadCount(userDetails.getUser().getId()));
-        return "manager/notifications";
-    }
-    
     /**
      * API lấy danh sách thông báo (có phân trang cho infinite scroll)
      */

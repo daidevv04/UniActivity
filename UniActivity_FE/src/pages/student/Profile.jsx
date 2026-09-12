@@ -113,7 +113,8 @@ export default function Profile() {
                 setPhone(data.phone || '')
                 setLoading(false)
 
-                // Fetch score data based on role
+                // ADMIN không có dữ liệu điểm rèn luyện (không phải sinh viên)
+                if (data.role === 'ADMIN') return
                 const apiPrefix = data.role === 'MANAGER' ? '/manager/api' : '/student/api'
                 fetch(`${apiPrefix}/my-scores`, { credentials: 'include' })
                     .then(r => { if (!r.ok) throw new Error(); return r.json() })

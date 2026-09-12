@@ -23,7 +23,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -48,34 +47,6 @@ public class ManagerActivityController {
     private final ManagerScopeAuthorizationService managerScopeAuthorizationService;
     private final EvidenceReviewService evidenceReviewService;
     private final ManagerRegistrationService managerRegistrationService;
-
-    @GetMapping("/activities")
-    public String activities(@AuthenticationPrincipal CustomUserDetails userDetails, Model model) {
-        User currentUser = userDetails.getUser();
-        model.addAttribute("user", currentUser);
-        model.addAttribute("studentClass", currentUser.getStudentClass());
-        // Pass classId for QR code generation - only students from this class can check-in
-        if (currentUser.getStudentClass() != null) {
-            model.addAttribute("classId", currentUser.getStudentClass().getId());
-        }
-        return "manager/activities";
-    }
-
-    @GetMapping("/activities/{activityId}")
-    public String activityDetail(@AuthenticationPrincipal CustomUserDetails userDetails,
-                                  @PathVariable Long activityId,
-                                  Model model) {
-        User currentUser = userDetails.getUser();
-        model.addAttribute("user", currentUser);
-        model.addAttribute("studentClass", currentUser.getStudentClass());
-        model.addAttribute("activityId", activityId);
-        
-        Activity activity = managerScopeAuthorizationService.requireActivity(currentUser, activityId);
-        model.addAttribute("activity", activity);
-        
-        return "manager/activity-detail";
-    }
-
     // ========== Manager Activities API (Moved to ManagerDataApiController for React frontend compatibility) ==========
     // @GetMapping("/api/activities")
     // @ResponseBody
