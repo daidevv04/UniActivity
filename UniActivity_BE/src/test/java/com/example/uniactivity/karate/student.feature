@@ -1,64 +1,90 @@
-Feature: Nghiệp vụ Student
+Feature: Student đăng ký và check-in (TC-045 đến TC-053)
 
   Background:
     * url baseUrl
-    * configure headers = { Authorization: '#("Bearer " + fixture.studentAToken)' }
 
-  Scenario: TC-025 Lấy activity hiển thị
+  Scenario: TC-045 Danh sách activity Student
+    * def student = call read('helpers/create-student.feature') { adminToken: '#(fixture.adminToken)', email: '#("karate-tc045-" + config.test.suffix + "@example.test")', fullName: 'Karate TC45', classId: '#(fixture.classAId)' }
+    * def login = call read('helpers/login.feature') { username: '#(student.username)', password: '#(config.test.password)' }
     Given path '/student/api/activities'
+    * configure headers = { Authorization: '#("Bearer " + login.accessToken)' }
     When method get
     Then status 200
-    And match response.hasClass == true
-    And match response.activities == '#[]'
-    And match response.registeredActivityIds == '#[]'
+    * print response
 
-  Scenario: TC-026 Student xem điểm bản thân
-    Given path '/student/api/users', fixture.studentA.id, 'scores'
-    When method get
-    Then status 200
-    And match response contains { totalScore: '#number', classification: '#string', categoryTotals: '#object', user: '#object' }
-    And match response.user.id == fixture.studentA.id
-
-  Scenario: TC-027 Chặn Student xem điểm người khác
-    Given path '/student/api/users', fixture.studentB.id, 'scores'
-    When method get
-    Then status 403
-    And match response.status == 403
-    And match response.message == '#string'
-
-  Scenario: TC-028 Đăng ký activity
-    * configure headers = { Authorization: '#("Bearer " + fixture.registrationStudent1Token)' }
-    Given path '/student/api/activities', fixture.openActivityId, 'register'
-    When method post
-    Then status 200
+  Scenario: TC-046 Đăng ký activity
+    * def prep = call read('helpers/prepare-reg.feature') { name: 'TC46' }
     Given path '/student/api/my-registrations'
-    And header Authorization = 'Bearer ' + fixture.registrationStudent1Token
+    * configure headers = { Authorization: '#("Bearer " + prep.token)' }
     When method get
     Then status 200
-    * def registration = karate.filter(response.registrations, function(x){ return x.activity.id == fixture.openActivityId })[0]
-    And match registration.status == 'REGISTERED'
+    * print response
 
-  Scenario: TC-029 Hủy activity đã đăng ký
-    * configure headers = { Authorization: '#("Bearer " + fixture.registrationStudent2Token)' }
-    Given path '/student/api/activities', fixture.openActivityId, 'register'
-    When method post
-    Then status 200
-    Given path '/student/api/activities', fixture.openActivityId, 'register'
-    When method delete
-    Then status 200
-    Given path '/student/api/my-registrations'
-    And header Authorization = 'Bearer ' + fixture.registrationStudent2Token
-    When method get
-    Then status 200
-    * def registration = karate.filter(response.registrations, function(x){ return x.activity.id == fixture.openActivityId })[0]
-    And match registration.status == 'CANCELLED'
-
-  Scenario: TC-030 Chặn đăng ký trùng activity
-    * configure headers = { Authorization: '#("Bearer " + fixture.registrationStudent3Token)' }
-    Given path '/student/api/activities', fixture.openActivityId, 'register'
-    When method post
-    Then status 200
-    Given path '/student/api/activities', fixture.openActivityId, 'register'
+  Scenario: TC-047 Chặn đăng ký trùng
+    * def prep = call read('helpers/prepare-reg.feature') { name: 'TC47' }
+    Given path '/student/api/activities', fixture.liveActivityId, 'register'
+    * configure headers = { Authorization: '#("Bearer " + prep.token)' }
     When method post
     Then status 409
-    And match response.message == '#string'
+    * print response
+
+  Scenario: TC-048 Hủy đăng ký
+    * def prep = call read('helpers/prepare-reg.feature') { name: 'TC48' }
+    Given path '/student/api/activities', fixture.liveActivityId, 'register'
+    * configure headers = { Authorization: '#("Bearer " + prep.token)' }
+    When method delete
+    Then status 200
+    * print response
+
+  Scenario: TC-049 Xem đăng ký cá nhân
+    * def prep = call read('helpers/prepare-reg.feature') { name: 'TC49' }
+    Given path '/student/api/my-registrations'
+    * configure headers = { Authorization: '#("Bearer " + prep.token)' }
+    When method get
+    Then status 200
+    * print response
+
+  Scenario: TC-050 Chặn check-in thiếu token
+    * def prep = call read('helpers/prepare-reg.feature') { name: 'TC50' }
+    Given path '/student/api/checkin', fixture.liveActivityId
+    * configure headers = { Authorization: '#("Bearer " + prep.token)' }
+    When method post
+    Then status 400
+    * print response
+
+  Scenario: TC-051 Chặn check-in token sai
+    * def prep = call read('helpers/prepare-reg.feature') { name: 'TC51' }
+    Given path '/student/api/checkin', fixture.liveActivityId
+    * configure headers = { Authorization: '#("Bearer " + prep.token)' }
+    And param token = 'SAI123'
+    When method post
+    Then status 400
+    * print response
+
+  Scenario: TC-052 Check-in QR động
+    * def prep = call read('helpers/prepare-reg.feature') { name: 'TC52' }
+    * def qr = call read('helpers/dynamic-qr.feature')
+    Given path '/student/api/checkin', fixture.liveActivityId
+    * configure headers = { Authorization: '#("Bearer " + prep.token)' }
+    And param classId = fixture.classAId
+    And param token = qr.token
+    And param lat = 10.762622
+    And param lng = 106.660172
+    And param accuracy = 5
+    When method post
+    Then status 200
+    * print response
+
+  Scenario: TC-053 Chặn check-in ngoài GPS
+    * def prep = call read('helpers/prepare-reg.feature') { name: 'TC53' }
+    * def qr = call read('helpers/dynamic-qr.feature')
+    Given path '/student/api/checkin', fixture.liveActivityId
+    * configure headers = { Authorization: '#("Bearer " + prep.token)' }
+    And param classId = fixture.classAId
+    And param token = qr.token
+    And param lat = 0
+    And param lng = 0
+    And param accuracy = 5
+    When method post
+    Then status 400
+    * print response

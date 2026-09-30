@@ -6,7 +6,7 @@ class ApiTest {
 
     @Karate.Test
     Karate testApi() {
-        return Karate.run("auth", "admin-catalog", "admin-users", "activities", "student")
+        return Karate.run("auth", "profile", "admin-catalog", "admin-users", "activities", "manager", "student", "evidence")
                 .relativeTo(getClass());
     }
 }

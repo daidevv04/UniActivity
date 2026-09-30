@@ -130,7 +130,7 @@ CREATE TABLE password_reset_tokens (
 -- OAuth login one-time exchange codes (only SHA-256 digests are stored)
 CREATE TABLE oauth_exchange_codes (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    code_hash CHAR(64) NOT NULL UNIQUE,
+    code_hash VARCHAR(64) NOT NULL UNIQUE,
     user_id BIGINT NOT NULL,
     expires_at DATETIME NOT NULL,
     consumed_at DATETIME,
@@ -177,6 +177,7 @@ CREATE TABLE activity_slots (
     class_id BIGINT,
     max_quantity INT NOT NULL,
     current_quantity INT DEFAULT 0,
+    version BIGINT NOT NULL DEFAULT 0,
     FOREIGN KEY (activity_id) REFERENCES activities(id),
     FOREIGN KEY (faculty_id) REFERENCES faculties(id),
     FOREIGN KEY (academic_year_id) REFERENCES academic_years(id),

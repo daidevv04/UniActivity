@@ -1,0 +1,359 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:uniactivity >-----------------------
+[INFO] Building uniactivity 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ uniactivity ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ uniactivity ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ uniactivity ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] Copying 17 resources from src\test\java to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ uniactivity ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ uniactivity ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.uniactivity.karate.ApiTest
+10:56:19.924 [main] INFO com.intuit.karate -- >> lock acquired, begin callSingle: classpath:com/example/uniactivity/karate/helpers/setup.feature
+10:56:21.117 [main] INFO com.intuit.karate -- << lock released, cached callSingle: classpath:com/example/uniactivity/karate/helpers/setup.feature
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/auth.feature
+scenarios:  9 | passed:  9 | failed:  0 | time: 0.3778
+---------------------------------------------------------
+
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/profile.feature
+scenarios:  3 | passed:  3 | failed:  0 | time: 0.6564
+---------------------------------------------------------
+
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/admin-catalog.feature
+scenarios: 14 | passed: 14 | failed:  0 | time: 0.3696
+---------------------------------------------------------
+
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/admin-users.feature
+scenarios:  8 | passed:  8 | failed:  0 | time: 1.3543
+---------------------------------------------------------
+
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/activities.feature
+scenarios:  7 | passed:  7 | failed:  0 | time: 0.2832
+---------------------------------------------------------
+
+10:56:27.294 [main] ERROR com.intuit.karate -- classpath:com/example/uniactivity/karate/helpers/upload-evidence.feature:4
+* def image = read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+js failed:
+>>>>
+01: read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+<<<<
+org.graalvm.polyglot.PolyglotException: 'other' has different root
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:420)
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:42)
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:135)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:131)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+
+classpath:com/example/uniactivity/karate/helpers/upload-evidence.feature:4
+10:56:27.298 [main] ERROR com.intuit.karate -- classpath:com/example/uniactivity/karate/manager.feature:34
+* call read('helpers/upload-evidence.feature') { token: '#(prep.token)', activityId: '#(fixture.liveActivityId)', scoreOptionId: '#(fixture.scoreOptionId)' }
+js failed:
+>>>>
+01: read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+<<<<
+org.graalvm.polyglot.PolyglotException: 'other' has different root
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:420)
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:42)
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:135)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:131)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+
+classpath:com/example/uniactivity/karate/helpers/upload-evidence.feature:4
+classpath:com/example/uniactivity/karate/manager.feature:34
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/manager.feature
+scenarios:  3 | passed:  2 | failed:  1 | time: 0.8687
+---------------------------------------------------------
+
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/student.feature
+scenarios:  9 | passed:  9 | failed:  0 | time: 2.1759
+---------------------------------------------------------
+
+10:56:30.007 [main] ERROR com.intuit.karate -- classpath:com/example/uniactivity/karate/evidence.feature:5
+* def image = read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+js failed:
+>>>>
+01: read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+<<<<
+org.graalvm.polyglot.PolyglotException: 'other' has different root
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:420)
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:42)
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:135)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:131)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+
+classpath:com/example/uniactivity/karate/evidence.feature:5
+10:56:30.014 [main] ERROR com.intuit.karate -- classpath:com/example/uniactivity/karate/evidence.feature:5
+* def image = read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+js failed:
+>>>>
+01: read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+<<<<
+org.graalvm.polyglot.PolyglotException: 'other' has different root
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:420)
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:42)
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:135)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:131)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+
+classpath:com/example/uniactivity/karate/evidence.feature:5
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/evidence.feature
+scenarios:  2 | passed:  0 | failed:  2 | time: 0.0035
+---------------------------------------------------------
+
+Karate version: 1.4.1
+======================================================
+elapsed:  11.31 | threads:    1 | thread time: 6.09 
+features:     8 | skipped:    0 | efficiency: 0.54
+scenarios:   55 | passed:    52 | failed: 3
+======================================================
+>>> failed features:
+js failed:
+>>>>
+01: read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+<<<<
+org.graalvm.polyglot.PolyglotException: 'other' has different root
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:420)
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:42)
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:135)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:131)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+
+classpath:com/example/uniactivity/karate/evidence.feature:5
+js failed:
+>>>>
+01: read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+<<<<
+org.graalvm.polyglot.PolyglotException: 'other' has different root
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:420)
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:42)
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:135)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:131)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+
+classpath:com/example/uniactivity/karate/evidence.feature:5
+js failed:
+>>>>
+01: read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+<<<<
+org.graalvm.polyglot.PolyglotException: 'other' has different root
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:420)
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:42)
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:135)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:131)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+
+classpath:com/example/uniactivity/karate/helpers/upload-evidence.feature:4
+classpath:com/example/uniactivity/karate/manager.feature:34
+<<<
+
+HTML report: (paste into browser to view) | Karate version: 1.4.1
+file:///D:/PROJECT/UniActivity/UniActivity_BE/target/karate-reports/karate-summary.html
+===================================================================
+
+[ERROR] Tests run: 55, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 12.32 s <<< FAILURE! -- in com.example.uniactivity.karate.ApiTest
+[ERROR] com.example.uniactivity.karate.ApiTest.[3:31] TC-044 Manager duy?t minh ch?ng ?úng m?t l?n -- Time elapsed: 0.400 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+js failed:
+>>>>
+01: read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+<<<<
+org.graalvm.polyglot.PolyglotException: 'other' has different root
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:420)
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:42)
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:135)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:131)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+
+classpath:com/example/uniactivity/karate/helpers/upload-evidence.feature:4
+classpath:com/example/uniactivity/karate/manager.feature:34
+	at com.intuit.karate.junit5.FeatureNode.lambda$next$1(FeatureNode.java:86)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEachOrdered(ReferencePipeline.java:601)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.example.uniactivity.karate.ApiTest.[1:8] TC-054 N?p minh ch?ng -- Time elapsed: 0.009 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+js failed:
+>>>>
+01: read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+<<<<
+org.graalvm.polyglot.PolyglotException: 'other' has different root
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:420)
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:42)
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:135)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:131)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+
+classpath:com/example/uniactivity/karate/evidence.feature:5
+	at com.intuit.karate.junit5.FeatureNode.lambda$next$1(FeatureNode.java:86)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEachOrdered(ReferencePipeline.java:601)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.example.uniactivity.karate.ApiTest.[2:25] TC-055 Ch?n quá 3 ?nh minh ch?ng -- Time elapsed: 0.221 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+js failed:
+>>>>
+01: read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+<<<<
+org.graalvm.polyglot.PolyglotException: 'other' has different root
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:420)
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:42)
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:135)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:131)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+
+classpath:com/example/uniactivity/karate/evidence.feature:5
+	at com.intuit.karate.junit5.FeatureNode.lambda$next$1(FeatureNode.java:86)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEachOrdered(ReferencePipeline.java:601)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   ApiTest.[1:8] TC-054 N?p minh ch?ng js failed:
+>>>>
+01: read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+<<<<
+org.graalvm.polyglot.PolyglotException: 'other' has different root
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:420)
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:42)
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:135)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:131)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+
+classpath:com/example/uniactivity/karate/evidence.feature:5
+[ERROR]   ApiTest.[2:25] TC-055 Ch?n quá 3 ?nh minh ch?ng js failed:
+>>>>
+01: read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+<<<<
+org.graalvm.polyglot.PolyglotException: 'other' has different root
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:420)
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:42)
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:135)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:131)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+
+classpath:com/example/uniactivity/karate/evidence.feature:5
+[ERROR]   ApiTest.[3:31] TC-044 Manager duy?t minh ch?ng ?úng m?t l?n js failed:
+>>>>
+01: read('file:C:/Users/DELL/Downloads/ChatGPT Image 00_31_33 28 thg 9, 2026.png')
+<<<<
+org.graalvm.polyglot.PolyglotException: 'other' has different root
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:420)
+- java.base/sun.nio.fs.WindowsPath.relativize(WindowsPath.java:42)
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:135)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:131)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+
+classpath:com/example/uniactivity/karate/helpers/upload-evidence.feature:4
+classpath:com/example/uniactivity/karate/manager.feature:34
+[INFO] 
+[ERROR] Tests run: 55, Failures: 3, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.134 s
+[INFO] Finished at: 2026-09-29T10:56:30+07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.4:test (default-test) on project uniactivity: There are test failures.
+[ERROR] 
+[ERROR] See D:\PROJECT\UniActivity\UniActivity_BE\target\surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

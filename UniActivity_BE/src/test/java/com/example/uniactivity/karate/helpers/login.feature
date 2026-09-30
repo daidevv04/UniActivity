@@ -6,6 +6,7 @@ Feature: Helper đăng nhập Karate
     And request { username: '#(username)', password: '#(password)' }
     When method post
     Then status 200
+    * print response
     * def accessToken = response.accessToken
     * def refreshToken = response.refreshToken
     * def user = response.user

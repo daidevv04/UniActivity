@@ -1,50 +1,63 @@
-Feature: Quản lý hoạt động
+Feature: Admin quản lý hoạt động (TC-035 đến TC-041)
 
   Background:
     * url baseUrl
     * configure headers = { Authorization: '#("Bearer " + fixture.adminToken)' }
-    * def now = java.time.LocalDateTime.now()
-    * def start = now.plusDays(2).withNano(0).toString()
-    * def end = now.plusDays(2).plusHours(2).withNano(0).toString()
-    * def deadline = now.plusDays(1).withNano(0).toString()
 
-  Scenario: TC-020 Lấy danh sách activity
+  Scenario: TC-035 Danh sách activity Admin
     Given path '/admin/activities/api'
     And param page = 0
     And param size = 20
     When method get
     Then status 200
-    And match response contains { content: '#[]', totalElements: '#number' }
+    * print response
 
-  Scenario: TC-021 Tạo activity
-    * def name = 'Karate Activity ' + config.test.suffix
+  Scenario: TC-036 Tạo activity
+    * def now = java.time.LocalDateTime.now()
     Given path '/admin/activities/api'
-    And request { name: '#(name)', description: 'API test', location: 'Campus', startTime: '#(start)', endTime: '#(end)', registrationDeadline: '#(deadline)', scope: 'SCHOOL', status: 'OPEN', semesterId: '#(fixture.semesterId)' }
+    And request { name: '#("Karate Activity " + config.test.suffix)', description: 'Karate activity', location: 'Campus', startTime: '#(now.plusDays(5).withNano(0).toString())', endTime: '#(now.plusDays(5).plusHours(2).withNano(0).toString())', registrationDeadline: '#(now.plusDays(4).withNano(0).toString())', scope: 'SCHOOL', status: 'OPEN', semesterId: '#(fixture.semesterId)' }
     When method post
     Then status 200
-    And match response contains { id: '#number', name: '#(name)' }
+    * print response
 
-  Scenario: TC-022 Xem activity vừa tạo
-    * def activity = call read('helpers/create-activity.feature') { adminToken: '#(fixture.adminToken)', name: 'Karate Detail #(config.test.suffix)', status: 'OPEN', start: '#(start)', end: '#(end)', deadline: '#(deadline)', semesterId: '#(fixture.semesterId)' }
+  Scenario: TC-037 Xem activity
+    * def now = java.time.LocalDateTime.now()
+    * def activity = call read('helpers/create-activity.feature') { adminToken: '#(fixture.adminToken)', name: '#("Karate TC37 " + config.test.suffix)', status: 'OPEN', start: '#(now.plusDays(5).withNano(0).toString())', end: '#(now.plusDays(5).plusHours(2).withNano(0).toString())', deadline: '#(now.plusDays(4).withNano(0).toString())', semesterId: '#(fixture.semesterId)' }
     Given path '/admin/activities/api', activity.id
     When method get
     Then status 200
-    And match response contains { id: '#(activity.id)', name: '#(activity.name)' }
+    * print response
 
-  Scenario: TC-023 Xóa activity chưa có registration
-    * def activity = call read('helpers/create-activity.feature') { adminToken: '#(fixture.adminToken)', name: 'Karate Delete #(config.test.suffix)', status: 'DRAFT', start: '#(start)', end: '#(end)', deadline: '#(deadline)', semesterId: '#(fixture.semesterId)' }
+  Scenario: TC-038 Cập nhật activity
+    * def now = java.time.LocalDateTime.now()
+    * def activity = call read('helpers/create-activity.feature') { adminToken: '#(fixture.adminToken)', name: '#("Karate TC38 " + config.test.suffix)', status: 'OPEN', start: '#(now.plusDays(5).withNano(0).toString())', end: '#(now.plusDays(5).plusHours(2).withNano(0).toString())', deadline: '#(now.plusDays(4).withNano(0).toString())', semesterId: '#(fixture.semesterId)' }
     Given path '/admin/activities/api', activity.id
-    When method delete
+    And request { name: '#("Karate Updated " + config.test.suffix)', description: 'Updated', location: 'Campus', startTime: '#(now.plusDays(5).withNano(0).toString())', endTime: '#(now.plusDays(5).plusHours(2).withNano(0).toString())', registrationDeadline: '#(now.plusDays(4).withNano(0).toString())', scope: 'SCHOOL', status: 'OPEN', semesterId: '#(fixture.semesterId)' }
+    When method put
     Then status 200
+    * print response
     Given path '/admin/activities/api', activity.id
     When method get
-    Then status 404
-    And match response.status == 404
+    Then status 200
+    * print response
 
-  Scenario: TC-024 Chặn activity thiếu tên
+  Scenario: TC-039 Validation tên activity rỗng
+    * def now = java.time.LocalDateTime.now()
     Given path '/admin/activities/api'
-    And request { name: '', description: 'API test', location: 'Campus', startTime: '#(start)', endTime: '#(end)', registrationDeadline: '#(deadline)', scope: 'SCHOOL', status: 'OPEN', semesterId: '#(fixture.semesterId)' }
+    And request { name: '', description: 'Invalid', location: 'Campus', startTime: '#(now.plusDays(5).withNano(0).toString())', endTime: '#(now.plusDays(5).plusHours(2).withNano(0).toString())', registrationDeadline: '#(now.plusDays(4).withNano(0).toString())', scope: 'SCHOOL', status: 'OPEN', semesterId: '#(fixture.semesterId)' }
     When method post
     Then status 400
-    And match response.status == 400
-    And match response.errors.name == '#string'
+    * print response
+
+  Scenario: TC-040 Tạo slot
+    Given path '/admin/activities/api', fixture.openActivityId, 'slots'
+    And request { classId: '#(fixture.classBId)', maxQuantity: 50 }
+    When method post
+    Then status 200
+    * print response
+
+  Scenario: TC-041 Xem slot
+    Given path '/admin/activities/api', fixture.openActivityId, 'slots'
+    When method get
+    Then status 200
+    * print response

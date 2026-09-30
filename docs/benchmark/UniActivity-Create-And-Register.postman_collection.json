@@ -1,0 +1,149 @@
+{
+  "info": {
+    "_postman_id": "d82c1c0b-e83e-40a0-b456-benchmark-uniactivity",
+    "name": "UniActivity - Benchmark Create And Register",
+    "description": "Đối chứng Karate/Newman. Luồng đo gồm 5 request: Admin login, Student login, tạo activity, tạo slot, Student đăng ký. semesterId, classId và Student là fixture có trước, không tính vào luồng đo.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "if (!pm.collectionVariables.get('runSuffix')) {",
+          "  const now = Date.now();",
+          "  const localIso = (offsetMs) => new Date(now + offsetMs).toISOString().slice(0, 19);",
+          "  pm.collectionVariables.set('runSuffix', String(now));",
+          "  pm.collectionVariables.set('startTime', localIso(5 * 24 * 60 * 60 * 1000));",
+          "  pm.collectionVariables.set('endTime', localIso((5 * 24 + 2) * 60 * 60 * 1000));",
+          "  pm.collectionVariables.set('registrationDeadline', localIso(4 * 24 * 60 * 60 * 1000));",
+          "}"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    { "key": "runSuffix", "value": "" },
+    { "key": "startTime", "value": "" },
+    { "key": "endTime", "value": "" },
+    { "key": "registrationDeadline", "value": "" },
+    { "key": "adminToken", "value": "" },
+    { "key": "studentToken", "value": "" },
+    { "key": "activityId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "01 - Admin login and get token",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+              "const json = pm.response.json();",
+              "pm.test('accessToken is a string', () => pm.expect(json.accessToken).to.be.a('string').and.not.empty);",
+              "pm.collectionVariables.set('adminToken', json.accessToken);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"username\": \"{{adminUsername}}\",\n  \"password\": \"{{adminPassword}}\"\n}", "options": { "raw": { "language": "json" } } },
+        "url": "{{baseUrl}}/api/auth/login"
+      }
+    },
+    {
+      "name": "02 - Student login and get token",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+              "const json = pm.response.json();",
+              "pm.test('accessToken is a string', () => pm.expect(json.accessToken).to.be.a('string').and.not.empty);",
+              "pm.collectionVariables.set('studentToken', json.accessToken);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"username\": \"{{studentUsername}}\",\n  \"password\": \"{{studentPassword}}\"\n}", "options": { "raw": { "language": "json" } } },
+        "url": "{{baseUrl}}/api/auth/login"
+      }
+    },
+    {
+      "name": "03 - Admin creates activity",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+              "const json = pm.response.json();",
+              "pm.test('id is a number and name is a string', () => { pm.expect(json.id).to.be.a('number'); pm.expect(json.name).to.be.a('string'); });",
+              "pm.collectionVariables.set('activityId', json.id);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }, { "key": "Authorization", "value": "Bearer {{adminToken}}" }],
+        "body": { "mode": "raw", "raw": "{\n  \"name\": \"Benchmark {{runSuffix}}\",\n  \"description\": \"Benchmark Karate va Newman\",\n  \"location\": \"Campus\",\n  \"startTime\": \"{{startTime}}\",\n  \"endTime\": \"{{endTime}}\",\n  \"registrationDeadline\": \"{{registrationDeadline}}\",\n  \"scope\": \"SCHOOL\",\n  \"status\": \"OPEN\",\n  \"semesterId\": {{semesterId}}\n}", "options": { "raw": { "language": "json" } } },
+        "url": "{{baseUrl}}/admin/activities/api"
+      }
+    },
+    {
+      "name": "04 - Admin creates class slot",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+              "const json = pm.response.json();",
+              "pm.test('slot id is a number', () => pm.expect(json.id).to.be.a('number'));"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }, { "key": "Authorization", "value": "Bearer {{adminToken}}" }],
+        "body": { "mode": "raw", "raw": "{\n  \"classId\": {{classId}},\n  \"maxQuantity\": 50\n}", "options": { "raw": { "language": "json" } } },
+        "url": "{{baseUrl}}/admin/activities/api/{{activityId}}/slots"
+      }
+    },
+    {
+      "name": "05 - Student registers activity",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+              "const json = pm.response.json();",
+              "pm.test('message is a string', () => pm.expect(json.message).to.be.a('string'));"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{studentToken}}" }],
+        "url": "{{baseUrl}}/student/api/activities/{{activityId}}/register"
+      }
+    }
+  ]
+}

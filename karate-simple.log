@@ -1,0 +1,5959 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:uniactivity >-----------------------
+[INFO] Building uniactivity 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ uniactivity ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ uniactivity ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ uniactivity ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] Copying 17 resources from src\test\java to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ uniactivity ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ uniactivity ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.uniactivity.karate.ApiTest
+11:13:14.953 [main] INFO com.intuit.karate -- >> lock acquired, begin callSingle: classpath:com/example/uniactivity/karate/helpers/setup.feature
+11:13:15.839 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiIsInR5cGUiOiJhY2Nlc3MiLCJ0b2tlblZlcnNpb24iOjIsImlhdCI6MTc5MDY1NTE5NSwiZXhwIjoxNzkwNjU4Nzk1fQ.FLjVweclp0ol1_VqSzFsuvyG7N3V1n5b9m-Qjc9rp26-6_UeAFATVkxtUmVZsAm8zZPl2KY8GFZ4VJfE0PyFUA",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwidHlwZSI6InJlZnJlc2giLCJ0b2tlblZlcnNpb24iOjIsImlhdCI6MTc5MDY1NTE5NSwiZXhwIjoxNzkxMjU5OTk1fQ.OAn8D_i2nFdvdaLcBZmqec7kR3iO-Y-M6A349BD3Li3Dpg3kCgAj4jl0WPW_dLjRKOQMalm20ZJohKcnb7skEg",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 1,
+    "username": "admin",
+    "fullName": "Qu?n tr? viên",
+    "email": "admin@uni.edu.vn",
+    "phone": "0123456789",
+    "role": "ADMIN",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:15.886 [main] INFO com.intuit.karate -- [print] {
+  "id": 131,
+  "code": "KARATE-1790655194901",
+  "startYear": 2026,
+  "endYear": 2027,
+  "status": "ACTIVE"
+}
+ 
+11:13:15.921 [main] INFO com.intuit.karate -- [print] {
+  "id": 115,
+  "code": "KARATE-1790655194901",
+  "name": "Karate Faculty 1790655194901",
+  "description": null,
+  "status": "ACTIVE"
+}
+ 
+11:13:15.969 [main] INFO com.intuit.karate -- [print] {
+  "id": 100,
+  "code": "KARATE-1790655194901",
+  "name": "Karate Class 1790655194901",
+  "joinCode": "F4ASEV",
+  "qrCodeUrl": null,
+  "facultyId": 115,
+  "facultyName": "Karate Faculty 1790655194901",
+  "academicYearId": 131,
+  "academicYearCode": "KARATE-1790655194901"
+}
+ 
+11:13:15.993 [main] INFO com.intuit.karate -- [print] {
+  "id": 113,
+  "name": "Karate Semester 1790655194901",
+  "startDate": "2026-01-01",
+  "endDate": "2026-12-31",
+  "isCurrent": true
+}
+ 
+11:13:16.149 [main] INFO com.intuit.karate -- [print] {
+  "id": 700,
+  "username": "14708821",
+  "email": "karate-a-1790655194901@example.test",
+  "fullName": "Karate Student A",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:16.1288856",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:16.269 [main] INFO com.intuit.karate -- [print] {
+  "id": 701,
+  "username": "77988025",
+  "email": "karate-b-1790655194901@example.test",
+  "fullName": "Karate Student B",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:16.2625296",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:16.376 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDAiLCJ1c2VybmFtZSI6IjE0NzA4ODIxIiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUxOTYsImV4cCI6MTc5MDY1ODc5Nn0.U4teLJUWI26Ly0LxS7MkFyW4RR-PXi1DCVuw7n_Hnp8xL7PJ95l7-0xbP2_av3Rh_6aXpAUck6UYAfngsjvr8A",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDAiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MTk2LCJleHAiOjE3OTEyNTk5OTZ9.9XMo7OdBpjXteIaZ0Sn8d2H6SPZZk3UNdgfoQK_JMZWJu5Ou7_maG6CG0MBAIOqgBEAVK7N_0WtqkRczRuaTnA",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 700,
+    "username": "14708821",
+    "fullName": "Karate Student A",
+    "email": "karate-a-1790655194901@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:16.443 [main] INFO com.intuit.karate -- [print] {
+  "id": 129,
+  "name": "Karate Open 1790655194901",
+  "description": "Karate API test",
+  "bannerUrl": null,
+  "location": "Campus",
+  "latitude": null,
+  "longitude": null,
+  "checkinRadius": null,
+  "startTime": "2026-10-01T11:13:16",
+  "endTime": "2026-10-01T13:13:16",
+  "registrationDeadline": "2026-09-30T11:13:16",
+  "scope": "SCHOOL",
+  "status": "OPEN",
+  "createdAt": "2026-09-29T11:13:16.4321124",
+  "semesterId": 113,
+  "semesterName": "Karate Semester 1790655194901",
+  "maxSlots": null,
+  "registeredCount": null,
+  "checkedInCount": null,
+  "isDeadlinePassed": null,
+  "isEnded": null
+}
+ 
+11:13:16.484 [main] INFO com.intuit.karate -- [print] {
+  "id": 84,
+  "maxQuantity": 100,
+  "currentQuantity": 0,
+  "facultyId": null,
+  "facultyName": null,
+  "academicYearId": null,
+  "academicYearCode": null,
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:16.500 [main] INFO com.intuit.karate -- [print] {
+  "id": 101,
+  "code": "KARATEB-1790655194901",
+  "name": "Karate Class B 1790655194901",
+  "joinCode": "U56QGQ",
+  "qrCodeUrl": null,
+  "facultyId": 115,
+  "facultyName": "Karate Faculty 1790655194901",
+  "academicYearId": 131,
+  "academicYearCode": "KARATE-1790655194901"
+}
+ 
+11:13:16.594 [main] INFO com.intuit.karate -- [print] {
+  "id": 702,
+  "username": "25297063",
+  "email": "karate-manager-a-1790655194901@example.test",
+  "fullName": "Karate Manager A",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "MANAGER",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:16.5852194",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:16.704 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDIiLCJ1c2VybmFtZSI6IjI1Mjk3MDYzIiwicm9sZSI6Ik1BTkFHRVIiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUxOTYsImV4cCI6MTc5MDY1ODc5Nn0.bSemKAonng-vKXSLWXS8ihQ0HoSGvdhA8WC3OyetZJaRqGz9NJmAkcBStPmOROFOCd4Oa20NkPtxtnV_bjFj4Q",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDIiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MTk2LCJleHAiOjE3OTEyNTk5OTZ9.nzcTid9wlOr1KioPYnYkobE4Tb3OWa1Alo36JK0s16Ex9GmrChpP0LFE02runXdiJaSgmq_Rv8vBxdWCa36erg",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 702,
+    "username": "25297063",
+    "fullName": "Karate Manager A",
+    "email": "karate-manager-a-1790655194901@example.test",
+    "phone": null,
+    "role": "MANAGER",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:16.726 [main] INFO com.intuit.karate -- [print] {
+  "id": 130,
+  "name": "Karate Live 1790655194901",
+  "description": "Karate live check-in",
+  "bannerUrl": null,
+  "location": "Campus",
+  "latitude": 10.762622,
+  "longitude": 106.660172,
+  "checkinRadius": 100,
+  "startTime": "2026-09-29T10:13:16",
+  "endTime": "2026-09-29T13:13:16",
+  "registrationDeadline": "2026-09-29T12:13:16",
+  "scope": "SCHOOL",
+  "status": "OPEN",
+  "createdAt": "2026-09-29T11:13:16.7187218",
+  "semesterId": 113,
+  "semesterName": "Karate Semester 1790655194901",
+  "maxSlots": null,
+  "registeredCount": null,
+  "checkedInCount": null,
+  "isDeadlinePassed": null,
+  "isEnded": null
+}
+ 
+11:13:16.758 [main] INFO com.intuit.karate -- [print] {
+  "id": 85,
+  "maxQuantity": 100,
+  "currentQuantity": 0,
+  "facultyId": null,
+  "facultyName": null,
+  "academicYearId": null,
+  "academicYearCode": null,
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:16.775 [main] INFO com.intuit.karate -- [print] {
+  "id": 38,
+  "name": "Tham gia",
+  "scoreCategory": "3.1",
+  "scoreValue": 5,
+  "description": null
+}
+ 
+11:13:16.781 [main] INFO com.intuit.karate -- << lock released, cached callSingle: classpath:com/example/uniactivity/karate/helpers/setup.feature
+11:13:16.878 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDAiLCJ1c2VybmFtZSI6IjE0NzA4ODIxIiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUxOTYsImV4cCI6MTc5MDY1ODc5Nn0.U4teLJUWI26Ly0LxS7MkFyW4RR-PXi1DCVuw7n_Hnp8xL7PJ95l7-0xbP2_av3Rh_6aXpAUck6UYAfngsjvr8A",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDAiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MTk2LCJleHAiOjE3OTEyNTk5OTZ9.9XMo7OdBpjXteIaZ0Sn8d2H6SPZZk3UNdgfoQK_JMZWJu5Ou7_maG6CG0MBAIOqgBEAVK7N_0WtqkRczRuaTnA",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 700,
+    "username": "14708821",
+    "fullName": "Karate Student A",
+    "email": "karate-a-1790655194901@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:16.994 [main] INFO com.intuit.karate -- [print] {
+  "error": "Email, mã tài kho?n ho?c m?t kh?u không ?úng."
+}
+ 
+11:13:17.037 [main] INFO com.intuit.karate -- [print] {
+  "error": "Vui lòng nh?p email ho?c mã tài kho?n và m?t kh?u."
+}
+ 
+11:13:17.068 [main] INFO com.intuit.karate -- [print] {
+  "error": "Refresh token không h?p l? ho?c ?ã h?t h?n."
+}
+ 
+11:13:17.100 [main] INFO com.intuit.karate -- [print] {
+  "status": 401,
+  "error": "Unauthorized",
+  "message": "B?n ch?a ??ng nh?p ho?c phiên ?ã h?t h?n",
+  "path": "/api/auth/me",
+  "timestamp": "2026-09-29T11:13:17.091889"
+}
+ 
+11:13:17.131 [main] INFO com.intuit.karate -- [print] {
+  "id": 700,
+  "username": "14708821",
+  "fullName": "Karate Student A",
+  "email": "karate-a-1790655194901@example.test",
+  "phone": null,
+  "role": "STUDENT",
+  "avatarUrl": null,
+  "provider": "LOCAL",
+  "status": "ACTIVE"
+}
+ 
+11:13:17.153 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDAiLCJ1c2VybmFtZSI6IjE0NzA4ODIxIiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUxOTcsImV4cCI6MTc5MDY1ODc5N30.cBeK7jB0ozj5sfXaHazSXfAceu1nUU_qnRzh8F_dBxW-tK6r2JPqwEHAtdKYuZwZYlZJp3tVAB_OebuglUFZqQ",
+  "tokenType": "Bearer",
+  "expiresIn": 3600
+}
+ 
+11:13:17.257 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDEiLCJ1c2VybmFtZSI6Ijc3OTg4MDI1Iiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUxOTcsImV4cCI6MTc5MDY1ODc5N30.3k2Ev31YkQwexu4Ek0_7HiTgl39vpbrZSEbq8wpG5gKuGoVPcjwEoopPv5VAM4pwC_-bn6jkyuaH_1WoJdfivg",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDEiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MTk3LCJleHAiOjE3OTEyNTk5OTd9.ZVqyLM0ZCAuWKXmllGB-p-Pi8dWh7BjZ0-bVIfQvdkbt-IyABrEKe8wMTHH8io8QHN9OZAAGX1vYlWoQHdw3Tw",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 701,
+    "username": "77988025",
+    "fullName": "Karate Student B",
+    "email": "karate-b-1790655194901@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:17.284 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng xu?t thành công."
+}
+ 
+11:13:17.292 [main] INFO com.intuit.karate -- [print] {
+  "status": 401,
+  "error": "Unauthorized",
+  "message": "B?n ch?a ??ng nh?p ho?c phiên ?ã h?t h?n",
+  "path": "/api/auth/me",
+  "timestamp": "2026-09-29T11:13:17.291767700"
+}
+ 
+11:13:17.314 [main] INFO com.intuit.karate -- [print] {
+  "error": "OAuth exchange code is required."
+}
+ 
+11:13:17.321 [main] INFO com.intuit.karate -- [print] {
+  "error": "OAuth exchange code is invalid or expired."
+}
+ 
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/auth.feature
+scenarios:  9 | passed:  9 | failed:  0 | time: 0.4000
+---------------------------------------------------------
+
+11:13:18.915 [main] INFO com.intuit.karate -- [print] {
+  "id": 700,
+  "username": "14708821",
+  "fullName": "Karate Student A",
+  "email": "karate-a-1790655194901@example.test",
+  "phone": null,
+  "role": "STUDENT",
+  "avatarUrl": null,
+  "provider": "LOCAL",
+  "emailVerified": false,
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:16",
+  "studentClass": {
+    "id": 100,
+    "name": "Karate Class 1790655194901",
+    "code": "KARATE-1790655194901",
+    "facultyName": "Karate Faculty 1790655194901"
+  }
+}
+ 
+11:13:19.289 [main] INFO com.intuit.karate -- [print] {
+  "message": "??i m?t kh?u thành công"
+}
+ 
+11:13:19.443 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDAiLCJ1c2VybmFtZSI6IjE0NzA4ODIxIiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUxOTksImV4cCI6MTc5MDY1ODc5OX0.jIfIza0APf6k1lCqmc6BpQWMBJK1NvQMYMyns8QuxV33UChNvArSnwPMQW55wfqDg97O04t1uuhjO03rag3UCg",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDAiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MTk5LCJleHAiOjE3OTEyNTk5OTl9.4riAY6eTo6CHCPUyC4Q9xL3kVzwthlxjzjpJFO3h5xYDLdIZxynbhH6pDPKZPDZ1BSWPV0SjxQ2zpWPmLHkDtQ",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 700,
+    "username": "14708821",
+    "fullName": "Karate Student A",
+    "email": "karate-a-1790655194901@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:19.584 [main] INFO com.intuit.karate -- [print] {
+  "id": 703,
+  "username": "39127793",
+  "email": "karate-tc026-1790655199459@example.test",
+  "fullName": "Karate TC26",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:19.5800152",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:19.676 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDMiLCJ1c2VybmFtZSI6IjM5MTI3NzkzIiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUxOTksImV4cCI6MTc5MDY1ODc5OX0.v33uvyDE8DpJpOa02UoRJDnKAKBTksQLrsai2-RFN3KQ760y_HiBCLzHkQ0l758iwGc5DyGOWzkV7AR0wV5w4A",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDMiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MTk5LCJleHAiOjE3OTEyNTk5OTl9.C0Xc-fas14yVAh92fY8NuhniD-aY7YlAfmhsadhbM9aNSB1WpSEqjDK-mCbGIFjbTxB-b2wQJRO9_TOOS7crWA",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 703,
+    "username": "39127793",
+    "fullName": "Karate TC26",
+    "email": "karate-tc026-1790655199459@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:19.764 [main] INFO com.intuit.karate -- [print] {
+  "message": "M?t kh?u hi?n t?i không ?úng"
+}
+ 
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/profile.feature
+scenarios:  3 | passed:  3 | failed:  0 | time: 0.8517
+---------------------------------------------------------
+
+11:13:19.903 [main] INFO com.intuit.karate -- [print] [
+  {
+    "id": 57,
+    "code": "KARATE-1790530117501",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 127,
+    "code": "KARATE-1790654567926",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 128,
+    "code": "KARATE-TC010-1790654570905",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 129,
+    "code": "KARATE-TC011-1790654570930",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 130,
+    "code": "KARATE-UPD-1790654570966",
+    "startYear": 2026,
+    "endYear": 2028,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 52,
+    "code": "KARATE-1790526579502",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 53,
+    "code": "KARATE-1790526784734",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 54,
+    "code": "KARATE-1790529618461",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 55,
+    "code": "KARATE-1790529687569",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 56,
+    "code": "DBG-1790529901035",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 67,
+    "code": "KARATE-1790531437306",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 58,
+    "code": "KARATE-1790530438138",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 59,
+    "code": "KARATE-1790530557154",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 60,
+    "code": "KARATE-1790530632978",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 61,
+    "code": "KARATE-1790530725406",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 62,
+    "code": "KARATE-1790530789934",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 63,
+    "code": "KARATE-1790530841695",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 64,
+    "code": "KARATE-1790530904217",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 65,
+    "code": "KARATE-1790531136708",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 66,
+    "code": "KARATE-1790531184027",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 131,
+    "code": "KARATE-1790655194901",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 68,
+    "code": "KARATE-TC010-1790531442963",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 69,
+    "code": "KARATE-TC011-1790531442982",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 70,
+    "code": "KARATE-1790531517865",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 71,
+    "code": "KARATE-TC010-1790531522704",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 72,
+    "code": "KARATE-TC011-1790531522720",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 73,
+    "code": "KARATE-1790531669486",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 74,
+    "code": "KARATE-TC010-1790531674479",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 75,
+    "code": "KARATE-TC011-1790531674500",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 76,
+    "code": "KARATE-1790531735802",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 77,
+    "code": "KARATE-1790531743467-CREATE",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 78,
+    "code": "KARATE-1790531743490-DETAIL",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 79,
+    "code": "KARATE-TC010-1790531749233",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 80,
+    "code": "KARATE-TC011-1790531749252",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 81,
+    "code": "KARATE-1790614845325",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 82,
+    "code": "KARATE-TC010-1790614849832",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 83,
+    "code": "KARATE-TC011-1790614849867",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 84,
+    "code": "KARATE-UPD-1790614849942",
+    "startYear": 2026,
+    "endYear": 2028,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 85,
+    "code": "KARATE-1790614957065",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 86,
+    "code": "KARATE-TC010-1790614959348",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 87,
+    "code": "KARATE-TC011-1790614959374",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 88,
+    "code": "KARATE-UPD-1790614959408",
+    "startYear": 2026,
+    "endYear": 2028,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 89,
+    "code": "KARATE-1790615008500",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 90,
+    "code": "KARATE-1790615012234-CREATE",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 91,
+    "code": "KARATE-1790615012262-DETAIL",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 92,
+    "code": "KARATE-TC010-1790615018689",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 93,
+    "code": "KARATE-TC011-1790615018707",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 94,
+    "code": "KARATE-UPD-1790615018739",
+    "startYear": 2026,
+    "endYear": 2028,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 95,
+    "code": "KARATE-1790615263573",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 96,
+    "code": "KARATE-TC010-1790615266062",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 97,
+    "code": "KARATE-TC011-1790615266093",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 98,
+    "code": "KARATE-UPD-1790615266134",
+    "startYear": 2026,
+    "endYear": 2028,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 99,
+    "code": "KARATE-1790615405335",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 100,
+    "code": "KARATE-TC010-1790615407497",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 101,
+    "code": "KARATE-TC011-1790615407521",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 102,
+    "code": "KARATE-UPD-1790615407556",
+    "startYear": 2026,
+    "endYear": 2028,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 103,
+    "code": "KARATE-1790652998876",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 104,
+    "code": "KARATE-TC010-1790653002734",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 105,
+    "code": "KARATE-TC011-1790653002767",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 106,
+    "code": "KARATE-UPD-1790653002821",
+    "startYear": 2026,
+    "endYear": 2028,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 107,
+    "code": "KARATE-1790653140061",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 108,
+    "code": "KARATE-TC010-1790653143834",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 109,
+    "code": "KARATE-TC011-1790653143865",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 110,
+    "code": "KARATE-UPD-1790653143908",
+    "startYear": 2026,
+    "endYear": 2028,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 111,
+    "code": "KARATE-1790653197985",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 112,
+    "code": "KARATE-TC010-1790653201900",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 113,
+    "code": "KARATE-TC011-1790653201931",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 114,
+    "code": "KARATE-UPD-1790653201983",
+    "startYear": 2026,
+    "endYear": 2028,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 115,
+    "code": "KARATE-1790654114538",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 116,
+    "code": "KARATE-TC010-1790654118288",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 117,
+    "code": "KARATE-TC011-1790654118315",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 118,
+    "code": "KARATE-UPD-1790654118388",
+    "startYear": 2026,
+    "endYear": 2028,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 119,
+    "code": "KARATE-1790654179903",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 120,
+    "code": "KARATE-TC010-1790654183639",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 121,
+    "code": "KARATE-TC011-1790654183668",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 122,
+    "code": "KARATE-UPD-1790654183709",
+    "startYear": 2026,
+    "endYear": 2028,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 123,
+    "code": "KARATE-1790654239238",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 124,
+    "code": "KARATE-TC010-1790654242895",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 125,
+    "code": "KARATE-TC011-1790654242917",
+    "startYear": 2026,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 126,
+    "code": "KARATE-UPD-1790654242953",
+    "startYear": 2026,
+    "endYear": 2028,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 5,
+    "code": "K47",
+    "startYear": 2024,
+    "endYear": 2028,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 4,
+    "code": "K46",
+    "startYear": 2023,
+    "endYear": 2027,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 3,
+    "code": "K45",
+    "startYear": 2022,
+    "endYear": 2026,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 2,
+    "code": "K44",
+    "startYear": 2021,
+    "endYear": 2025,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 1,
+    "code": "K43",
+    "startYear": 2020,
+    "endYear": 2024,
+    "status": "ACTIVE"
+  }
+]
+ 
+11:13:19.930 [main] INFO com.intuit.karate -- [print] {
+  "id": 132,
+  "code": "KARATE-TC010-1790655199911",
+  "startYear": 2026,
+  "endYear": 2027,
+  "status": "ACTIVE"
+}
+ 
+11:13:19.958 [main] INFO com.intuit.karate -- [print] {
+  "id": 133,
+  "code": "KARATE-TC011-1790655199940",
+  "startYear": 2026,
+  "endYear": 2027,
+  "status": "ACTIVE"
+}
+ 
+11:13:19.973 [main] INFO com.intuit.karate -- [print] {
+  "id": 133,
+  "code": "KARATE-TC011-1790655199940",
+  "startYear": 2026,
+  "endYear": 2027,
+  "status": "ACTIVE"
+}
+ 
+11:13:20.004 [main] INFO com.intuit.karate -- [print] {
+  "id": 134,
+  "code": "KARATE-TC012-1790655199986",
+  "startYear": 2026,
+  "endYear": 2027,
+  "status": "ACTIVE"
+}
+ 
+11:13:20.023 [main] INFO com.intuit.karate -- [print] {
+  "id": 134,
+  "code": "KARATE-UPD-1790655199986",
+  "startYear": 2026,
+  "endYear": 2028,
+  "status": "ACTIVE"
+}
+ 
+11:13:20.036 [main] INFO com.intuit.karate -- [print] {
+  "id": 134,
+  "code": "KARATE-UPD-1790655199986",
+  "startYear": 2026,
+  "endYear": 2028,
+  "status": "ACTIVE"
+}
+ 
+11:13:20.059 [main] INFO com.intuit.karate -- [print] {
+  "status": 404,
+  "message": "Không tìm th?y Khóa h?c v?i ID: 999999999",
+  "timestamp": "2026-09-29T11:13:20.0584711"
+}
+ 
+11:13:20.086 [main] INFO com.intuit.karate -- [print] [
+  {
+    "id": 1,
+    "name": "H?c k? 1 2023-2024",
+    "startDate": "2023-09-01",
+    "endDate": "2024-01-15",
+    "isCurrent": false
+  },
+  {
+    "id": 2,
+    "name": "H?c k? 2 2023-2024",
+    "startDate": "2024-02-01",
+    "endDate": "2024-06-15",
+    "isCurrent": false
+  },
+  {
+    "id": 3,
+    "name": "H?c k? 1 2024-2025",
+    "startDate": "2024-09-01",
+    "endDate": "2025-01-15",
+    "isCurrent": false
+  },
+  {
+    "id": 4,
+    "name": "H?c k? 2 2024-2025",
+    "startDate": "2025-02-01",
+    "endDate": "2025-06-15",
+    "isCurrent": false
+  },
+  {
+    "id": 52,
+    "name": "Karate Semester 1790526579502",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 53,
+    "name": "Karate Semester 1790526784734",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 54,
+    "name": "Karate Semester 1790529618461",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 55,
+    "name": "Karate Semester 1790529687569",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 56,
+    "name": "Dbg Semester 1790529901035",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 57,
+    "name": "Karate Semester 1790530117501",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 58,
+    "name": "Karate Semester 1790530438138",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 59,
+    "name": "Karate Semester 1790530557154",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 60,
+    "name": "Karate Semester 1790530632978",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 61,
+    "name": "Karate Semester 1790530725406",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 62,
+    "name": "Karate Semester 1790530789934",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 63,
+    "name": "Karate Semester 1790530841695",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 64,
+    "name": "Karate Semester 1790530904217",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 65,
+    "name": "Karate Semester 1790531136708",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 66,
+    "name": "Karate Semester 1790531184027",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 67,
+    "name": "Karate Semester 1790531437306",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 68,
+    "name": "H?c k? TC37 1790531445439",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 69,
+    "name": "Karate Semester 1790531517865",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 70,
+    "name": "H?c k? TC37 1790531525013",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 71,
+    "name": "Karate Semester 1790531669486",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 72,
+    "name": "H?c k? TC37 1790531676830",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 73,
+    "name": "Karate Semester 1790531735802",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 74,
+    "name": "Karate HK 1790531743615",
+    "startDate": null,
+    "endDate": null,
+    "isCurrent": false
+  },
+  {
+    "id": 75,
+    "name": "H?c k? TC37 1790531751729",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 76,
+    "name": "Karate Semester 1790614845325",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 77,
+    "name": "H?c k? Karate 1790614850187",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 78,
+    "name": "H?c k? current 1790614850219",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 79,
+    "name": "Karate Semester 1790614957065",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 80,
+    "name": "H?c k? Karate 1790614959516",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 81,
+    "name": "H?c k? current 1790614959538",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 82,
+    "name": "Karate Semester 1790615008500",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 83,
+    "name": "Karate HK 1790615012537",
+    "startDate": null,
+    "endDate": null,
+    "isCurrent": false
+  },
+  {
+    "id": 84,
+    "name": "H?c k? Karate 1790615018839",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 85,
+    "name": "H?c k? current 1790615018860",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 86,
+    "name": "Karate Semester 1790615263573",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 87,
+    "name": "H?c k? Karate 1790615266249",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 88,
+    "name": "H?c k? current 1790615266268",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 89,
+    "name": "Karate Semester 1790615405335",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 90,
+    "name": "H?c k? Karate 1790615407702",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 91,
+    "name": "H?c k? current 1790615407727",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 92,
+    "name": "Karate Semester 1790652998876",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 93,
+    "name": "H?c k? Karate 1790653002966",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 94,
+    "name": "H?c k? current 1790653002989",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 95,
+    "name": "Karate Semester 1790653140061",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 96,
+    "name": "H?c k? Karate 1790653144064",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 97,
+    "name": "H?c k? current 1790653144089",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 98,
+    "name": "Karate Semester 1790653197985",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 99,
+    "name": "H?c k? Karate 1790653202113",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 100,
+    "name": "H?c k? current 1790653202142",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 101,
+    "name": "Karate Semester 1790654114538",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 102,
+    "name": "H?c k? Karate 1790654118489",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 103,
+    "name": "H?c k? current 1790654118514",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 104,
+    "name": "Karate Semester 1790654179903",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 105,
+    "name": "H?c k? Karate 1790654183827",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 106,
+    "name": "H?c k? current 1790654183851",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 107,
+    "name": "Karate Semester 1790654239238",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 108,
+    "name": "H?c k? Karate 1790654243067",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 109,
+    "name": "H?c k? current 1790654243091",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 110,
+    "name": "Karate Semester 1790654567926",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 111,
+    "name": "H?c k? Karate 1790654571113",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 112,
+    "name": "H?c k? current 1790654571140",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 113,
+    "name": "Karate Semester 1790655194901",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": true
+  }
+]
+ 
+11:13:20.108 [main] INFO com.intuit.karate -- [print] {
+  "id": 114,
+  "name": "H?c k? Karate 1790655200093",
+  "startDate": "2027-01-01",
+  "endDate": "2027-05-31",
+  "isCurrent": false
+}
+ 
+11:13:20.134 [main] INFO com.intuit.karate -- [print] {
+  "id": 115,
+  "name": "H?c k? current 1790655200116",
+  "startDate": "2027-06-01",
+  "endDate": "2027-12-31",
+  "isCurrent": false
+}
+ 
+11:13:20.152 [main] INFO com.intuit.karate -- [print]  
+11:13:20.169 [main] INFO com.intuit.karate -- [print] [
+  {
+    "id": 1,
+    "name": "H?c k? 1 2023-2024",
+    "startDate": "2023-09-01",
+    "endDate": "2024-01-15",
+    "isCurrent": false
+  },
+  {
+    "id": 2,
+    "name": "H?c k? 2 2023-2024",
+    "startDate": "2024-02-01",
+    "endDate": "2024-06-15",
+    "isCurrent": false
+  },
+  {
+    "id": 3,
+    "name": "H?c k? 1 2024-2025",
+    "startDate": "2024-09-01",
+    "endDate": "2025-01-15",
+    "isCurrent": false
+  },
+  {
+    "id": 4,
+    "name": "H?c k? 2 2024-2025",
+    "startDate": "2025-02-01",
+    "endDate": "2025-06-15",
+    "isCurrent": false
+  },
+  {
+    "id": 52,
+    "name": "Karate Semester 1790526579502",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 53,
+    "name": "Karate Semester 1790526784734",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 54,
+    "name": "Karate Semester 1790529618461",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 55,
+    "name": "Karate Semester 1790529687569",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 56,
+    "name": "Dbg Semester 1790529901035",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 57,
+    "name": "Karate Semester 1790530117501",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 58,
+    "name": "Karate Semester 1790530438138",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 59,
+    "name": "Karate Semester 1790530557154",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 60,
+    "name": "Karate Semester 1790530632978",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 61,
+    "name": "Karate Semester 1790530725406",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 62,
+    "name": "Karate Semester 1790530789934",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 63,
+    "name": "Karate Semester 1790530841695",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 64,
+    "name": "Karate Semester 1790530904217",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 65,
+    "name": "Karate Semester 1790531136708",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 66,
+    "name": "Karate Semester 1790531184027",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 67,
+    "name": "Karate Semester 1790531437306",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 68,
+    "name": "H?c k? TC37 1790531445439",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 69,
+    "name": "Karate Semester 1790531517865",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 70,
+    "name": "H?c k? TC37 1790531525013",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 71,
+    "name": "Karate Semester 1790531669486",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 72,
+    "name": "H?c k? TC37 1790531676830",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 73,
+    "name": "Karate Semester 1790531735802",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 74,
+    "name": "Karate HK 1790531743615",
+    "startDate": null,
+    "endDate": null,
+    "isCurrent": false
+  },
+  {
+    "id": 75,
+    "name": "H?c k? TC37 1790531751729",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 76,
+    "name": "Karate Semester 1790614845325",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 77,
+    "name": "H?c k? Karate 1790614850187",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 78,
+    "name": "H?c k? current 1790614850219",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 79,
+    "name": "Karate Semester 1790614957065",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 80,
+    "name": "H?c k? Karate 1790614959516",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 81,
+    "name": "H?c k? current 1790614959538",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 82,
+    "name": "Karate Semester 1790615008500",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 83,
+    "name": "Karate HK 1790615012537",
+    "startDate": null,
+    "endDate": null,
+    "isCurrent": false
+  },
+  {
+    "id": 84,
+    "name": "H?c k? Karate 1790615018839",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 85,
+    "name": "H?c k? current 1790615018860",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 86,
+    "name": "Karate Semester 1790615263573",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 87,
+    "name": "H?c k? Karate 1790615266249",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 88,
+    "name": "H?c k? current 1790615266268",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 89,
+    "name": "Karate Semester 1790615405335",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 90,
+    "name": "H?c k? Karate 1790615407702",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 91,
+    "name": "H?c k? current 1790615407727",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 92,
+    "name": "Karate Semester 1790652998876",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 93,
+    "name": "H?c k? Karate 1790653002966",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 94,
+    "name": "H?c k? current 1790653002989",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 95,
+    "name": "Karate Semester 1790653140061",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 96,
+    "name": "H?c k? Karate 1790653144064",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 97,
+    "name": "H?c k? current 1790653144089",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 98,
+    "name": "Karate Semester 1790653197985",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 99,
+    "name": "H?c k? Karate 1790653202113",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 100,
+    "name": "H?c k? current 1790653202142",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 101,
+    "name": "Karate Semester 1790654114538",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 102,
+    "name": "H?c k? Karate 1790654118489",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 103,
+    "name": "H?c k? current 1790654118514",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 104,
+    "name": "Karate Semester 1790654179903",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 105,
+    "name": "H?c k? Karate 1790654183827",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 106,
+    "name": "H?c k? current 1790654183851",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 107,
+    "name": "Karate Semester 1790654239238",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 108,
+    "name": "H?c k? Karate 1790654243067",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 109,
+    "name": "H?c k? current 1790654243091",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 110,
+    "name": "Karate Semester 1790654567926",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 111,
+    "name": "H?c k? Karate 1790654571113",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 112,
+    "name": "H?c k? current 1790654571140",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 113,
+    "name": "Karate Semester 1790655194901",
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31",
+    "isCurrent": false
+  },
+  {
+    "id": 114,
+    "name": "H?c k? Karate 1790655200093",
+    "startDate": "2027-01-01",
+    "endDate": "2027-05-31",
+    "isCurrent": false
+  },
+  {
+    "id": 115,
+    "name": "H?c k? current 1790655200116",
+    "startDate": "2027-06-01",
+    "endDate": "2027-12-31",
+    "isCurrent": true
+  }
+]
+ 
+11:13:20.209 [main] INFO com.intuit.karate -- [print] [
+  {
+    "id": 1,
+    "code": "CNTT",
+    "name": "Công ngh? Thông tin",
+    "description": "Khoa Công ngh? Thông tin và Truy?n thông",
+    "status": "ACTIVE"
+  },
+  {
+    "id": 2,
+    "code": "KT",
+    "name": "Kinh t?",
+    "description": "Khoa Kinh t? và Qu?n tr? Kinh doanh",
+    "status": "ACTIVE"
+  },
+  {
+    "id": 3,
+    "code": "NN",
+    "name": "Ngo?i ng?",
+    "description": "Khoa Ngo?i ng?",
+    "status": "ACTIVE"
+  },
+  {
+    "id": 4,
+    "code": "XD",
+    "name": "Xây d?ng",
+    "description": "Khoa K? thu?t Xây d?ng",
+    "status": "ACTIVE"
+  },
+  {
+    "id": 5,
+    "code": "DT",
+    "name": "?i?n t?",
+    "description": "Khoa ?i?n - ?i?n t?",
+    "status": "ACTIVE"
+  },
+  {
+    "id": 52,
+    "code": "KARATE-1790526579502",
+    "name": "Karate Faculty 1790526579502",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 53,
+    "code": "KARATE-1790526784734",
+    "name": "Karate Faculty 1790526784734",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 54,
+    "code": "KARATE-1790529618461",
+    "name": "Karate Faculty 1790529618461",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 55,
+    "code": "KARATE-1790529687569",
+    "name": "Karate Faculty 1790529687569",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 56,
+    "code": "DBG-1790529901035",
+    "name": "Dbg Faculty 1790529901035",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 57,
+    "code": "KARATE-1790530117501",
+    "name": "Karate Faculty 1790530117501",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 58,
+    "code": "KARATE-1790530438138",
+    "name": "Karate Faculty 1790530438138",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 59,
+    "code": "KARATE-1790530557154",
+    "name": "Karate Faculty 1790530557154",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 60,
+    "code": "KARATE-1790530632978",
+    "name": "Karate Faculty 1790530632978",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 61,
+    "code": "KARATE-1790530725406",
+    "name": "Karate Faculty 1790530725406",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 62,
+    "code": "KARATE-1790530789934",
+    "name": "Karate Faculty 1790530789934",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 63,
+    "code": "KARATE-1790530841695",
+    "name": "Karate Faculty 1790530841695",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 64,
+    "code": "KARATE-1790530904217",
+    "name": "Karate Faculty 1790530904217",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 65,
+    "code": "KARATE-1790531136708",
+    "name": "Karate Faculty 1790531136708",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 66,
+    "code": "KARATE-1790531184027",
+    "name": "Karate Faculty 1790531184027",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 67,
+    "code": "KARATE-1790531437306",
+    "name": "Karate Faculty 1790531437306",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 68,
+    "code": "TC38-1790531445459",
+    "name": "Khoa Karate TC38 1790531445459",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 69,
+    "code": "KARATE-1790531517865",
+    "name": "Karate Faculty 1790531517865",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 70,
+    "code": "TC38-1790531525031",
+    "name": "Khoa Karate TC38 1790531525031",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 71,
+    "code": "KARATE-1790531669486",
+    "name": "Karate Faculty 1790531669486",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 72,
+    "code": "TC38-1790531676852",
+    "name": "Khoa Karate TC38 1790531676852",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 73,
+    "code": "KARATE-1790531735802",
+    "name": "Karate Faculty 1790531735802",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 74,
+    "code": "KARATE-1790531743553-FAC",
+    "name": "Khoa Karate 1790531743553",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 75,
+    "code": "KARATE-1790531743578-FACUP",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 76,
+    "code": "TC38-1790531751749",
+    "name": "Khoa Karate TC38 1790531751749",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 77,
+    "code": "KARATE-1790614845325",
+    "name": "Karate Faculty 1790614845325",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 78,
+    "code": "KARATE-TC020-1790614850407",
+    "name": "Khoa Karate 1790614850407",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 79,
+    "code": "KARATE-UPD-1790614850446",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 80,
+    "code": "KARATE-1790614957065",
+    "name": "Karate Faculty 1790614957065",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 81,
+    "code": "KARATE-TC020-1790614959642",
+    "name": "Khoa Karate 1790614959642",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 82,
+    "code": "KARATE-UPD-1790614959669",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 83,
+    "code": "KARATE-1790615008500",
+    "name": "Karate Faculty 1790615008500",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 84,
+    "code": "KARATE-1790615012368-FAC",
+    "name": "Khoa Karate 1790615012368",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 85,
+    "code": "KARATE-1790615012434-FACUP",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 86,
+    "code": "KARATE-TC020-1790615018962",
+    "name": "Khoa Karate 1790615018962",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 87,
+    "code": "KARATE-UPD-1790615018989",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 88,
+    "code": "KARATE-1790615263573",
+    "name": "Karate Faculty 1790615263573",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 89,
+    "code": "KARATE-TC020-1790615266405",
+    "name": "Khoa Karate 1790615266405",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 90,
+    "code": "KARATE-UPD-1790615266436",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 91,
+    "code": "KARATE-1790615405335",
+    "name": "Karate Faculty 1790615405335",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 92,
+    "code": "KARATE-TC020-1790615407845",
+    "name": "Khoa Karate 1790615407845",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 93,
+    "code": "KARATE-UPD-1790615407877",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 94,
+    "code": "KARATE-1790652998876",
+    "name": "Karate Faculty 1790652998876",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 95,
+    "code": "KARATE-TC020-1790653003065",
+    "name": "Khoa Karate 1790653003065",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 96,
+    "code": "KARATE-UPD-1790653003087",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 97,
+    "code": "KARATE-1790653140061",
+    "name": "Karate Faculty 1790653140061",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 98,
+    "code": "KARATE-TC020-1790653144158",
+    "name": "Khoa Karate 1790653144158",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 99,
+    "code": "KARATE-UPD-1790653144176",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 100,
+    "code": "KARATE-1790653197985",
+    "name": "Karate Faculty 1790653197985",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 101,
+    "code": "KARATE-TC020-1790653202214",
+    "name": "Khoa Karate 1790653202214",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 102,
+    "code": "KARATE-UPD-1790653202233",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 103,
+    "code": "KARATE-1790654114538",
+    "name": "Karate Faculty 1790654114538",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 104,
+    "code": "KARATE-TC020-1790654118595",
+    "name": "Khoa Karate 1790654118595",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 105,
+    "code": "KARATE-UPD-1790654118613",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 106,
+    "code": "KARATE-1790654179903",
+    "name": "Karate Faculty 1790654179903",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 107,
+    "code": "KARATE-TC020-1790654183940",
+    "name": "Khoa Karate 1790654183940",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 108,
+    "code": "KARATE-UPD-1790654183959",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 109,
+    "code": "KARATE-1790654239238",
+    "name": "Karate Faculty 1790654239238",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 110,
+    "code": "KARATE-TC020-1790654243171",
+    "name": "Khoa Karate 1790654243171",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 111,
+    "code": "KARATE-UPD-1790654243193",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 112,
+    "code": "KARATE-1790654567926",
+    "name": "Karate Faculty 1790654567926",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 113,
+    "code": "KARATE-TC020-1790654571236",
+    "name": "Khoa Karate 1790654571236",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 114,
+    "code": "KARATE-UPD-1790654571264",
+    "name": "Khoa Karate Updated",
+    "description": null,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 115,
+    "code": "KARATE-1790655194901",
+    "name": "Karate Faculty 1790655194901",
+    "description": null,
+    "status": "ACTIVE"
+  }
+]
+ 
+11:13:20.231 [main] INFO com.intuit.karate -- [print] {
+  "id": 116,
+  "code": "KARATE-TC020-1790655200218",
+  "name": "Khoa Karate 1790655200218",
+  "description": null,
+  "status": "ACTIVE"
+}
+ 
+11:13:20.254 [main] INFO com.intuit.karate -- [print] {
+  "id": 117,
+  "code": "KARATE-TC021-1790655200238",
+  "name": "Khoa c?",
+  "description": null,
+  "status": "ACTIVE"
+}
+ 
+11:13:20.268 [main] INFO com.intuit.karate -- [print] {
+  "id": 117,
+  "code": "KARATE-UPD-1790655200238",
+  "name": "Khoa Karate Updated",
+  "description": null,
+  "status": "ACTIVE"
+}
+ 
+11:13:20.276 [main] INFO com.intuit.karate -- [print] {
+  "id": 117,
+  "code": "KARATE-UPD-1790655200238",
+  "name": "Khoa Karate Updated",
+  "description": null,
+  "status": "ACTIVE"
+}
+ 
+11:13:20.323 [main] INFO com.intuit.karate -- [print] [
+  {
+    "id": 1,
+    "code": "CNTT-K45A",
+    "name": "CNTT K45A",
+    "joinCode": "R4PWYQ",
+    "qrCodeUrl": null,
+    "facultyId": 1,
+    "facultyName": "Công ngh? Thông tin",
+    "academicYearId": 3,
+    "academicYearCode": "K45"
+  },
+  {
+    "id": 2,
+    "code": "CNTT-K45B",
+    "name": "CNTT K45B",
+    "joinCode": "ZYYNK4",
+    "qrCodeUrl": null,
+    "facultyId": 1,
+    "facultyName": "Công ngh? Thông tin",
+    "academicYearId": 3,
+    "academicYearCode": "K45"
+  },
+  {
+    "id": 3,
+    "code": "KT-K45A",
+    "name": "Kinh t??? K45A",
+    "joinCode": "EAX545",
+    "qrCodeUrl": null,
+    "facultyId": 2,
+    "facultyName": "Kinh t?",
+    "academicYearId": 3,
+    "academicYearCode": "K45"
+  },
+  {
+    "id": 4,
+    "code": "NN-K45A",
+    "name": "Ngo???i ng??? K45A",
+    "joinCode": "P9U2TA",
+    "qrCodeUrl": null,
+    "facultyId": 3,
+    "facultyName": "Ngo?i ng?",
+    "academicYearId": 3,
+    "academicYearCode": "K45"
+  },
+  {
+    "id": 5,
+    "code": "XD-K45A",
+    "name": "X??y d???ng K45A",
+    "joinCode": "N6FNF3",
+    "qrCodeUrl": null,
+    "facultyId": 4,
+    "facultyName": "Xây d?ng",
+    "academicYearId": 3,
+    "academicYearCode": "K45"
+  },
+  {
+    "id": 6,
+    "code": "DT-K45A",
+    "name": "??i???n t??? K45A",
+    "joinCode": "4U9QGY",
+    "qrCodeUrl": null,
+    "facultyId": 5,
+    "facultyName": "?i?n t?",
+    "academicYearId": 3,
+    "academicYearCode": "K45"
+  },
+  {
+    "id": 7,
+    "code": "CNTT-K46A",
+    "name": "CNTT K46A",
+    "joinCode": "ENK6ER",
+    "qrCodeUrl": null,
+    "facultyId": 1,
+    "facultyName": "Công ngh? Thông tin",
+    "academicYearId": 4,
+    "academicYearCode": "K46"
+  },
+  {
+    "id": 8,
+    "code": "KT-K46A",
+    "name": "Kinh t??? K46A",
+    "joinCode": "P6HB4Q",
+    "qrCodeUrl": null,
+    "facultyId": 2,
+    "facultyName": "Kinh t?",
+    "academicYearId": 4,
+    "academicYearCode": "K46"
+  },
+  {
+    "id": 9,
+    "code": "KARATE-1790526579502",
+    "name": "Karate Class 1790526579502",
+    "joinCode": "B563R9",
+    "qrCodeUrl": null,
+    "facultyId": 52,
+    "facultyName": "Karate Faculty 1790526579502",
+    "academicYearId": 52,
+    "academicYearCode": "KARATE-1790526579502"
+  },
+  {
+    "id": 10,
+    "code": "KARATEB-1790526579502",
+    "name": "Karate Class B 1790526579502",
+    "joinCode": "U5BD97",
+    "qrCodeUrl": null,
+    "facultyId": 52,
+    "facultyName": "Karate Faculty 1790526579502",
+    "academicYearId": 52,
+    "academicYearCode": "KARATE-1790526579502"
+  },
+  {
+    "id": 11,
+    "code": "KARATE-1790526784734",
+    "name": "Karate Class 1790526784734",
+    "joinCode": "P5RHG9",
+    "qrCodeUrl": null,
+    "facultyId": 53,
+    "facultyName": "Karate Faculty 1790526784734",
+    "academicYearId": 53,
+    "academicYearCode": "KARATE-1790526784734"
+  },
+  {
+    "id": 12,
+    "code": "KARATEB-1790526784734",
+    "name": "Karate Class B 1790526784734",
+    "joinCode": "B2GEPA",
+    "qrCodeUrl": null,
+    "facultyId": 53,
+    "facultyName": "Karate Faculty 1790526784734",
+    "academicYearId": 53,
+    "academicYearCode": "KARATE-1790526784734"
+  },
+  {
+    "id": 13,
+    "code": "KARATE-1790529618461",
+    "name": "Karate Class 1790529618461",
+    "joinCode": "C32WMV",
+    "qrCodeUrl": null,
+    "facultyId": 54,
+    "facultyName": "Karate Faculty 1790529618461",
+    "academicYearId": 54,
+    "academicYearCode": "KARATE-1790529618461"
+  },
+  {
+    "id": 14,
+    "code": "KARATEB-1790529618461",
+    "name": "Karate Class B 1790529618461",
+    "joinCode": "M8X5SG",
+    "qrCodeUrl": null,
+    "facultyId": 54,
+    "facultyName": "Karate Faculty 1790529618461",
+    "academicYearId": 54,
+    "academicYearCode": "KARATE-1790529618461"
+  },
+  {
+    "id": 15,
+    "code": "KARATE-1790529687569",
+    "name": "Karate Class 1790529687569",
+    "joinCode": "B54E9W",
+    "qrCodeUrl": null,
+    "facultyId": 55,
+    "facultyName": "Karate Faculty 1790529687569",
+    "academicYearId": 55,
+    "academicYearCode": "KARATE-1790529687569"
+  },
+  {
+    "id": 16,
+    "code": "KARATEB-1790529687569",
+    "name": "Karate Class B 1790529687569",
+    "joinCode": "F6YTX3",
+    "qrCodeUrl": null,
+    "facultyId": 55,
+    "facultyName": "Karate Faculty 1790529687569",
+    "academicYearId": 55,
+    "academicYearCode": "KARATE-1790529687569"
+  },
+  {
+    "id": 17,
+    "code": "DBG-1790529901035",
+    "name": "Dbg Class 1790529901035",
+    "joinCode": "Q43DPY",
+    "qrCodeUrl": null,
+    "facultyId": 56,
+    "facultyName": "Dbg Faculty 1790529901035",
+    "academicYearId": 56,
+    "academicYearCode": "DBG-1790529901035"
+  },
+  {
+    "id": 18,
+    "code": "KARATE-1790530117501",
+    "name": "Karate Class 1790530117501",
+    "joinCode": "A85756",
+    "qrCodeUrl": null,
+    "facultyId": 57,
+    "facultyName": "Karate Faculty 1790530117501",
+    "academicYearId": 57,
+    "academicYearCode": "KARATE-1790530117501"
+  },
+  {
+    "id": 19,
+    "code": "KARATEB-1790530117501",
+    "name": "Karate Class B 1790530117501",
+    "joinCode": "Z4CXYW",
+    "qrCodeUrl": null,
+    "facultyId": 57,
+    "facultyName": "Karate Faculty 1790530117501",
+    "academicYearId": 57,
+    "academicYearCode": "KARATE-1790530117501"
+  },
+  {
+    "id": 20,
+    "code": "KARATE-1790530438138",
+    "name": "Karate Class 1790530438138",
+    "joinCode": "Y2JG4V",
+    "qrCodeUrl": null,
+    "facultyId": 58,
+    "facultyName": "Karate Faculty 1790530438138",
+    "academicYearId": 58,
+    "academicYearCode": "KARATE-1790530438138"
+  },
+  {
+    "id": 21,
+    "code": "KARATEB-1790530438138",
+    "name": "Karate Class B 1790530438138",
+    "joinCode": "F77EEU",
+    "qrCodeUrl": null,
+    "facultyId": 58,
+    "facultyName": "Karate Faculty 1790530438138",
+    "academicYearId": 58,
+    "academicYearCode": "KARATE-1790530438138"
+  },
+  {
+    "id": 22,
+    "code": "KARATE-1790530557154",
+    "name": "Karate Class 1790530557154",
+    "joinCode": "H4GNRU",
+    "qrCodeUrl": null,
+    "facultyId": 59,
+    "facultyName": "Karate Faculty 1790530557154",
+    "academicYearId": 59,
+    "academicYearCode": "KARATE-1790530557154"
+  },
+  {
+    "id": 23,
+    "code": "KARATEB-1790530557154",
+    "name": "Karate Class B 1790530557154",
+    "joinCode": "X77XHC",
+    "qrCodeUrl": null,
+    "facultyId": 59,
+    "facultyName": "Karate Faculty 1790530557154",
+    "academicYearId": 59,
+    "academicYearCode": "KARATE-1790530557154"
+  },
+  {
+    "id": 24,
+    "code": "KARATE-1790530632978",
+    "name": "Karate Class 1790530632978",
+    "joinCode": "A533EC",
+    "qrCodeUrl": null,
+    "facultyId": 60,
+    "facultyName": "Karate Faculty 1790530632978",
+    "academicYearId": 60,
+    "academicYearCode": "KARATE-1790530632978"
+  },
+  {
+    "id": 25,
+    "code": "KARATEB-1790530632978",
+    "name": "Karate Class B 1790530632978",
+    "joinCode": "J6JGN8",
+    "qrCodeUrl": null,
+    "facultyId": 60,
+    "facultyName": "Karate Faculty 1790530632978",
+    "academicYearId": 60,
+    "academicYearCode": "KARATE-1790530632978"
+  },
+  {
+    "id": 26,
+    "code": "KARATE-1790530725406",
+    "name": "Karate Class 1790530725406",
+    "joinCode": "J75EXV",
+    "qrCodeUrl": null,
+    "facultyId": 61,
+    "facultyName": "Karate Faculty 1790530725406",
+    "academicYearId": 61,
+    "academicYearCode": "KARATE-1790530725406"
+  },
+  {
+    "id": 27,
+    "code": "KARATEB-1790530725406",
+    "name": "Karate Class B 1790530725406",
+    "joinCode": "J66U6F",
+    "qrCodeUrl": null,
+    "facultyId": 61,
+    "facultyName": "Karate Faculty 1790530725406",
+    "academicYearId": 61,
+    "academicYearCode": "KARATE-1790530725406"
+  },
+  {
+    "id": 28,
+    "code": "KARATE-1790530789934",
+    "name": "Karate Class 1790530789934",
+    "joinCode": "A6UY4R",
+    "qrCodeUrl": null,
+    "facultyId": 62,
+    "facultyName": "Karate Faculty 1790530789934",
+    "academicYearId": 62,
+    "academicYearCode": "KARATE-1790530789934"
+  },
+  {
+    "id": 29,
+    "code": "KARATEB-1790530789934",
+    "name": "Karate Class B 1790530789934",
+    "joinCode": "S93DAZ",
+    "qrCodeUrl": null,
+    "facultyId": 62,
+    "facultyName": "Karate Faculty 1790530789934",
+    "academicYearId": 62,
+    "academicYearCode": "KARATE-1790530789934"
+  },
+  {
+    "id": 30,
+    "code": "KARATE-1790530841695",
+    "name": "Karate Class 1790530841695",
+    "joinCode": "K5T9YH",
+    "qrCodeUrl": null,
+    "facultyId": 63,
+    "facultyName": "Karate Faculty 1790530841695",
+    "academicYearId": 63,
+    "academicYearCode": "KARATE-1790530841695"
+  },
+  {
+    "id": 31,
+    "code": "KARATEB-1790530841695",
+    "name": "Karate Class B 1790530841695",
+    "joinCode": "X5PJV5",
+    "qrCodeUrl": null,
+    "facultyId": 63,
+    "facultyName": "Karate Faculty 1790530841695",
+    "academicYearId": 63,
+    "academicYearCode": "KARATE-1790530841695"
+  },
+  {
+    "id": 32,
+    "code": "KARATE-1790530904217",
+    "name": "Karate Class 1790530904217",
+    "joinCode": "B7M8E6",
+    "qrCodeUrl": null,
+    "facultyId": 64,
+    "facultyName": "Karate Faculty 1790530904217",
+    "academicYearId": 64,
+    "academicYearCode": "KARATE-1790530904217"
+  },
+  {
+    "id": 33,
+    "code": "KARATEB-1790530904217",
+    "name": "Karate Class B 1790530904217",
+    "joinCode": "X2C2SJ",
+    "qrCodeUrl": null,
+    "facultyId": 64,
+    "facultyName": "Karate Faculty 1790530904217",
+    "academicYearId": 64,
+    "academicYearCode": "KARATE-1790530904217"
+  },
+  {
+    "id": 34,
+    "code": "KARATE-1790531136708",
+    "name": "Karate Class 1790531136708",
+    "joinCode": "G94DVN",
+    "qrCodeUrl": null,
+    "facultyId": 65,
+    "facultyName": "Karate Faculty 1790531136708",
+    "academicYearId": 65,
+    "academicYearCode": "KARATE-1790531136708"
+  },
+  {
+    "id": 35,
+    "code": "KARATEB-1790531136708",
+    "name": "Karate Class B 1790531136708",
+    "joinCode": "R5WWQZ",
+    "qrCodeUrl": null,
+    "facultyId": 65,
+    "facultyName": "Karate Faculty 1790531136708",
+    "academicYearId": 65,
+    "academicYearCode": "KARATE-1790531136708"
+  },
+  {
+    "id": 36,
+    "code": "KARATE-1790531184027",
+    "name": "Karate Class 1790531184027",
+    "joinCode": "A8XW64",
+    "qrCodeUrl": null,
+    "facultyId": 66,
+    "facultyName": "Karate Faculty 1790531184027",
+    "academicYearId": 66,
+    "academicYearCode": "KARATE-1790531184027"
+  },
+  {
+    "id": 37,
+    "code": "KARATEB-1790531184027",
+    "name": "Karate Class B 1790531184027",
+    "joinCode": "U7U5WB",
+    "qrCodeUrl": null,
+    "facultyId": 66,
+    "facultyName": "Karate Faculty 1790531184027",
+    "academicYearId": 66,
+    "academicYearCode": "KARATE-1790531184027"
+  },
+  {
+    "id": 38,
+    "code": "KARATE-1790531437306",
+    "name": "Karate Class 1790531437306",
+    "joinCode": "W8AQUU",
+    "qrCodeUrl": null,
+    "facultyId": 67,
+    "facultyName": "Karate Faculty 1790531437306",
+    "academicYearId": 67,
+    "academicYearCode": "KARATE-1790531437306"
+  },
+  {
+    "id": 39,
+    "code": "KARATEB-1790531437306",
+    "name": "Karate Class B 1790531437306",
+    "joinCode": "P79XC2",
+    "qrCodeUrl": null,
+    "facultyId": 67,
+    "facultyName": "Karate Faculty 1790531437306",
+    "academicYearId": 67,
+    "academicYearCode": "KARATE-1790531437306"
+  },
+  {
+    "id": 40,
+    "code": "TC39-1790531445477",
+    "name": "Karate Class TC39 1790531445477",
+    "joinCode": "Z3EBAW",
+    "qrCodeUrl": null,
+    "facultyId": 67,
+    "facultyName": "Karate Faculty 1790531437306",
+    "academicYearId": 67,
+    "academicYearCode": "KARATE-1790531437306"
+  },
+  {
+    "id": 41,
+    "code": "KARATE-1790531517865",
+    "name": "Karate Class 1790531517865",
+    "joinCode": "X3T4V4",
+    "qrCodeUrl": null,
+    "facultyId": 69,
+    "facultyName": "Karate Faculty 1790531517865",
+    "academicYearId": 70,
+    "academicYearCode": "KARATE-1790531517865"
+  },
+  {
+    "id": 42,
+    "code": "KARATEB-1790531517865",
+    "name": "Karate Class B 1790531517865",
+    "joinCode": "A489QK",
+    "qrCodeUrl": null,
+    "facultyId": 69,
+    "facultyName": "Karate Faculty 1790531517865",
+    "academicYearId": 70,
+    "academicYearCode": "KARATE-1790531517865"
+  },
+  {
+    "id": 43,
+    "code": "TC39-1790531525050",
+    "name": "Karate Class TC39 1790531525050",
+    "joinCode": "X2TQ4Z",
+    "qrCodeUrl": null,
+    "facultyId": 69,
+    "facultyName": "Karate Faculty 1790531517865",
+    "academicYearId": 70,
+    "academicYearCode": "KARATE-1790531517865"
+  },
+  {
+    "id": 44,
+    "code": "KARATE-1790531669486",
+    "name": "Karate Class 1790531669486",
+    "joinCode": "K5UBRH",
+    "qrCodeUrl": null,
+    "facultyId": 71,
+    "facultyName": "Karate Faculty 1790531669486",
+    "academicYearId": 73,
+    "academicYearCode": "KARATE-1790531669486"
+  },
+  {
+    "id": 45,
+    "code": "KARATEB-1790531669486",
+    "name": "Karate Class B 1790531669486",
+    "joinCode": "N5T5P3",
+    "qrCodeUrl": null,
+    "facultyId": 71,
+    "facultyName": "Karate Faculty 1790531669486",
+    "academicYearId": 73,
+    "academicYearCode": "KARATE-1790531669486"
+  },
+  {
+    "id": 46,
+    "code": "TC39-1790531676875",
+    "name": "Karate Class TC39 1790531676875",
+    "joinCode": "N7W5F6",
+    "qrCodeUrl": null,
+    "facultyId": 71,
+    "facultyName": "Karate Faculty 1790531669486",
+    "academicYearId": 73,
+    "academicYearCode": "KARATE-1790531669486"
+  },
+  {
+    "id": 47,
+    "code": "KARATE-1790531735802",
+    "name": "Karate Class 1790531735802",
+    "joinCode": "B8YAHF",
+    "qrCodeUrl": null,
+    "facultyId": 73,
+    "facultyName": "Karate Faculty 1790531735802",
+    "academicYearId": 76,
+    "academicYearCode": "KARATE-1790531735802"
+  },
+  {
+    "id": 48,
+    "code": "KARATEB-1790531735802",
+    "name": "Karate Class B 1790531735802",
+    "joinCode": "F9GTYB",
+    "qrCodeUrl": null,
+    "facultyId": 73,
+    "facultyName": "Karate Faculty 1790531735802",
+    "academicYearId": 76,
+    "academicYearCode": "KARATE-1790531735802"
+  },
+  {
+    "id": 49,
+    "code": "KL-1790531743638",
+    "name": "L?p Karate 1790531743638",
+    "joinCode": "Y87UC6",
+    "qrCodeUrl": null,
+    "facultyId": 73,
+    "facultyName": "Karate Faculty 1790531735802",
+    "academicYearId": 76,
+    "academicYearCode": "KARATE-1790531735802"
+  },
+  {
+    "id": 50,
+    "code": "TC39-1790531751768",
+    "name": "Karate Class TC39 1790531751768",
+    "joinCode": "B5BQ75",
+    "qrCodeUrl": null,
+    "facultyId": 73,
+    "facultyName": "Karate Faculty 1790531735802",
+    "academicYearId": 76,
+    "academicYearCode": "KARATE-1790531735802"
+  },
+  {
+    "id": 51,
+    "code": "KARATE-1790614845325",
+    "name": "Karate Class 1790614845325",
+    "joinCode": "E2XE3C",
+    "qrCodeUrl": null,
+    "facultyId": 77,
+    "facultyName": "Karate Faculty 1790614845325",
+    "academicYearId": 81,
+    "academicYearCode": "KARATE-1790614845325"
+  },
+  {
+    "id": 52,
+    "code": "KARATEB-1790614845325",
+    "name": "Karate Class B 1790614845325",
+    "joinCode": "P6QA6Q",
+    "qrCodeUrl": null,
+    "facultyId": 77,
+    "facultyName": "Karate Faculty 1790614845325",
+    "academicYearId": 81,
+    "academicYearCode": "KARATE-1790614845325"
+  },
+  {
+    "id": 53,
+    "code": "KARATE-TC024-1790614851043",
+    "name": "L?p Karate 1790614851043",
+    "joinCode": "M95C4V",
+    "qrCodeUrl": null,
+    "facultyId": 77,
+    "facultyName": "Karate Faculty 1790614845325",
+    "academicYearId": 81,
+    "academicYearCode": "KARATE-1790614845325"
+  },
+  {
+    "id": 54,
+    "code": "KARATE-TC025-1790614851109",
+    "name": "L?p Karate TC25",
+    "joinCode": "V8RJSV",
+    "qrCodeUrl": null,
+    "facultyId": 77,
+    "facultyName": "Karate Faculty 1790614845325",
+    "academicYearId": 81,
+    "academicYearCode": "KARATE-1790614845325"
+  },
+  {
+    "id": 55,
+    "code": "KARATE-1790614957065",
+    "name": "Karate Class 1790614957065",
+    "joinCode": "G2VYQW",
+    "qrCodeUrl": null,
+    "facultyId": 80,
+    "facultyName": "Karate Faculty 1790614957065",
+    "academicYearId": 85,
+    "academicYearCode": "KARATE-1790614957065"
+  },
+  {
+    "id": 56,
+    "code": "KARATEB-1790614957065",
+    "name": "Karate Class B 1790614957065",
+    "joinCode": "M7KPQN",
+    "qrCodeUrl": null,
+    "facultyId": 80,
+    "facultyName": "Karate Faculty 1790614957065",
+    "academicYearId": 85,
+    "academicYearCode": "KARATE-1790614957065"
+  },
+  {
+    "id": 57,
+    "code": "KARATE-TC024-1790614960092",
+    "name": "L?p Karate 1790614960092",
+    "joinCode": "X2A3U8",
+    "qrCodeUrl": null,
+    "facultyId": 80,
+    "facultyName": "Karate Faculty 1790614957065",
+    "academicYearId": 85,
+    "academicYearCode": "KARATE-1790614957065"
+  },
+  {
+    "id": 58,
+    "code": "KARATE-TC025-1790614960118",
+    "name": "L?p Karate TC25",
+    "joinCode": "W8Z5EJ",
+    "qrCodeUrl": null,
+    "facultyId": 80,
+    "facultyName": "Karate Faculty 1790614957065",
+    "academicYearId": 85,
+    "academicYearCode": "KARATE-1790614957065"
+  },
+  {
+    "id": 59,
+    "code": "KARATE-1790615008500",
+    "name": "Karate Class 1790615008500",
+    "joinCode": "T437E3",
+    "qrCodeUrl": null,
+    "facultyId": 83,
+    "facultyName": "Karate Faculty 1790615008500",
+    "academicYearId": 89,
+    "academicYearCode": "KARATE-1790615008500"
+  },
+  {
+    "id": 60,
+    "code": "KARATEB-1790615008500",
+    "name": "Karate Class B 1790615008500",
+    "joinCode": "C2SVEH",
+    "qrCodeUrl": null,
+    "facultyId": 83,
+    "facultyName": "Karate Faculty 1790615008500",
+    "academicYearId": 89,
+    "academicYearCode": "KARATE-1790615008500"
+  },
+  {
+    "id": 61,
+    "code": "KL-1790615012605",
+    "name": "L?p Karate 1790615012605",
+    "joinCode": "X9WQKT",
+    "qrCodeUrl": null,
+    "facultyId": 83,
+    "facultyName": "Karate Faculty 1790615008500",
+    "academicYearId": 89,
+    "academicYearCode": "KARATE-1790615008500"
+  },
+  {
+    "id": 62,
+    "code": "KARATE-TC024-1790615019419",
+    "name": "L?p Karate 1790615019419",
+    "joinCode": "K738CP",
+    "qrCodeUrl": null,
+    "facultyId": 83,
+    "facultyName": "Karate Faculty 1790615008500",
+    "academicYearId": 89,
+    "academicYearCode": "KARATE-1790615008500"
+  },
+  {
+    "id": 63,
+    "code": "KARATE-TC025-1790615019456",
+    "name": "L?p Karate TC25",
+    "joinCode": "S3FA99",
+    "qrCodeUrl": null,
+    "facultyId": 83,
+    "facultyName": "Karate Faculty 1790615008500",
+    "academicYearId": 89,
+    "academicYearCode": "KARATE-1790615008500"
+  },
+  {
+    "id": 64,
+    "code": "KARATE-1790615263573",
+    "name": "Karate Class 1790615263573",
+    "joinCode": "C6RQ8P",
+    "qrCodeUrl": null,
+    "facultyId": 88,
+    "facultyName": "Karate Faculty 1790615263573",
+    "academicYearId": 95,
+    "academicYearCode": "KARATE-1790615263573"
+  },
+  {
+    "id": 65,
+    "code": "KARATEB-1790615263573",
+    "name": "Karate Class B 1790615263573",
+    "joinCode": "A3EFBX",
+    "qrCodeUrl": null,
+    "facultyId": 88,
+    "facultyName": "Karate Faculty 1790615263573",
+    "academicYearId": 95,
+    "academicYearCode": "KARATE-1790615263573"
+  },
+  {
+    "id": 66,
+    "code": "KARATE-TC024-1790615266858",
+    "name": "L?p Karate 1790615266858",
+    "joinCode": "E79AE5",
+    "qrCodeUrl": null,
+    "facultyId": 88,
+    "facultyName": "Karate Faculty 1790615263573",
+    "academicYearId": 95,
+    "academicYearCode": "KARATE-1790615263573"
+  },
+  {
+    "id": 67,
+    "code": "KARATE-TC025-1790615266896",
+    "name": "L?p Karate TC25",
+    "joinCode": "V57DV8",
+    "qrCodeUrl": null,
+    "facultyId": 88,
+    "facultyName": "Karate Faculty 1790615263573",
+    "academicYearId": 95,
+    "academicYearCode": "KARATE-1790615263573"
+  },
+  {
+    "id": 68,
+    "code": "KARATE-1790615405335",
+    "name": "Karate Class 1790615405335",
+    "joinCode": "H6R8H7",
+    "qrCodeUrl": null,
+    "facultyId": 91,
+    "facultyName": "Karate Faculty 1790615405335",
+    "academicYearId": 99,
+    "academicYearCode": "KARATE-1790615405335"
+  },
+  {
+    "id": 69,
+    "code": "KARATEB-1790615405335",
+    "name": "Karate Class B 1790615405335",
+    "joinCode": "Z5Q8CK",
+    "qrCodeUrl": null,
+    "facultyId": 91,
+    "facultyName": "Karate Faculty 1790615405335",
+    "academicYearId": 99,
+    "academicYearCode": "KARATE-1790615405335"
+  },
+  {
+    "id": 70,
+    "code": "KARATE-TC024-1790615408345",
+    "name": "L?p Karate 1790615408345",
+    "joinCode": "X4S2KJ",
+    "qrCodeUrl": null,
+    "facultyId": 91,
+    "facultyName": "Karate Faculty 1790615405335",
+    "academicYearId": 99,
+    "academicYearCode": "KARATE-1790615405335"
+  },
+  {
+    "id": 71,
+    "code": "KARATE-TC025-1790615408371",
+    "name": "L?p Karate TC25",
+    "joinCode": "R3TJ2K",
+    "qrCodeUrl": null,
+    "facultyId": 91,
+    "facultyName": "Karate Faculty 1790615405335",
+    "academicYearId": 99,
+    "academicYearCode": "KARATE-1790615405335"
+  },
+  {
+    "id": 72,
+    "code": "KARATE-1790652998876",
+    "name": "Karate Class 1790652998876",
+    "joinCode": "S2VZX9",
+    "qrCodeUrl": null,
+    "facultyId": 94,
+    "facultyName": "Karate Faculty 1790652998876",
+    "academicYearId": 103,
+    "academicYearCode": "KARATE-1790652998876"
+  },
+  {
+    "id": 73,
+    "code": "KARATEB-1790652998876",
+    "name": "Karate Class B 1790652998876",
+    "joinCode": "S5MWZ3",
+    "qrCodeUrl": null,
+    "facultyId": 94,
+    "facultyName": "Karate Faculty 1790652998876",
+    "academicYearId": 103,
+    "academicYearCode": "KARATE-1790652998876"
+  },
+  {
+    "id": 74,
+    "code": "KARATE-TC024-1790653003178",
+    "name": "L?p Karate 1790653003178",
+    "joinCode": "C2V6MG",
+    "qrCodeUrl": null,
+    "facultyId": 94,
+    "facultyName": "Karate Faculty 1790652998876",
+    "academicYearId": 103,
+    "academicYearCode": "KARATE-1790652998876"
+  },
+  {
+    "id": 75,
+    "code": "KARATE-TC025-1790653003207",
+    "name": "L?p Karate TC25",
+    "joinCode": "E8NAFX",
+    "qrCodeUrl": null,
+    "facultyId": 94,
+    "facultyName": "Karate Faculty 1790652998876",
+    "academicYearId": 103,
+    "academicYearCode": "KARATE-1790652998876"
+  },
+  {
+    "id": 76,
+    "code": "KARATE-1790653140061",
+    "name": "Karate Class 1790653140061",
+    "joinCode": "J5FBXH",
+    "qrCodeUrl": null,
+    "facultyId": 97,
+    "facultyName": "Karate Faculty 1790653140061",
+    "academicYearId": 107,
+    "academicYearCode": "KARATE-1790653140061"
+  },
+  {
+    "id": 77,
+    "code": "KARATEB-1790653140061",
+    "name": "Karate Class B 1790653140061",
+    "joinCode": "V6NEUJ",
+    "qrCodeUrl": null,
+    "facultyId": 97,
+    "facultyName": "Karate Faculty 1790653140061",
+    "academicYearId": 107,
+    "academicYearCode": "KARATE-1790653140061"
+  },
+  {
+    "id": 78,
+    "code": "KARATE-TC024-1790653144271",
+    "name": "L?p Karate 1790653144271",
+    "joinCode": "X537YW",
+    "qrCodeUrl": null,
+    "facultyId": 97,
+    "facultyName": "Karate Faculty 1790653140061",
+    "academicYearId": 107,
+    "academicYearCode": "KARATE-1790653140061"
+  },
+  {
+    "id": 79,
+    "code": "KARATE-TC025-1790653144294",
+    "name": "L?p Karate TC25",
+    "joinCode": "P8NCDF",
+    "qrCodeUrl": null,
+    "facultyId": 97,
+    "facultyName": "Karate Faculty 1790653140061",
+    "academicYearId": 107,
+    "academicYearCode": "KARATE-1790653140061"
+  },
+  {
+    "id": 80,
+    "code": "KARATE-1790653197985",
+    "name": "Karate Class 1790653197985",
+    "joinCode": "X5WK2D",
+    "qrCodeUrl": null,
+    "facultyId": 100,
+    "facultyName": "Karate Faculty 1790653197985",
+    "academicYearId": 111,
+    "academicYearCode": "KARATE-1790653197985"
+  },
+  {
+    "id": 81,
+    "code": "KARATEB-1790653197985",
+    "name": "Karate Class B 1790653197985",
+    "joinCode": "A6VM3W",
+    "qrCodeUrl": null,
+    "facultyId": 100,
+    "facultyName": "Karate Faculty 1790653197985",
+    "academicYearId": 111,
+    "academicYearCode": "KARATE-1790653197985"
+  },
+  {
+    "id": 82,
+    "code": "KARATE-TC024-1790653202318",
+    "name": "L?p Karate 1790653202318",
+    "joinCode": "A3CVB8",
+    "qrCodeUrl": null,
+    "facultyId": 100,
+    "facultyName": "Karate Faculty 1790653197985",
+    "academicYearId": 111,
+    "academicYearCode": "KARATE-1790653197985"
+  },
+  {
+    "id": 83,
+    "code": "KARATE-TC025-1790653202341",
+    "name": "L?p Karate TC25",
+    "joinCode": "M8VZAU",
+    "qrCodeUrl": null,
+    "facultyId": 100,
+    "facultyName": "Karate Faculty 1790653197985",
+    "academicYearId": 111,
+    "academicYearCode": "KARATE-1790653197985"
+  },
+  {
+    "id": 84,
+    "code": "KARATE-1790654114538",
+    "name": "Karate Class 1790654114538",
+    "joinCode": "C98ZWB",
+    "qrCodeUrl": null,
+    "facultyId": 103,
+    "facultyName": "Karate Faculty 1790654114538",
+    "academicYearId": 115,
+    "academicYearCode": "KARATE-1790654114538"
+  },
+  {
+    "id": 85,
+    "code": "KARATEB-1790654114538",
+    "name": "Karate Class B 1790654114538",
+    "joinCode": "V7X2BF",
+    "qrCodeUrl": null,
+    "facultyId": 103,
+    "facultyName": "Karate Faculty 1790654114538",
+    "academicYearId": 115,
+    "academicYearCode": "KARATE-1790654114538"
+  },
+  {
+    "id": 86,
+    "code": "KARATE-TC024-1790654118688",
+    "name": "L?p Karate 1790654118688",
+    "joinCode": "R8F3W7",
+    "qrCodeUrl": null,
+    "facultyId": 103,
+    "facultyName": "Karate Faculty 1790654114538",
+    "academicYearId": 115,
+    "academicYearCode": "KARATE-1790654114538"
+  },
+  {
+    "id": 87,
+    "code": "KARATE-TC025-1790654118709",
+    "name": "L?p Karate TC25",
+    "joinCode": "D5WSVH",
+    "qrCodeUrl": null,
+    "facultyId": 103,
+    "facultyName": "Karate Faculty 1790654114538",
+    "academicYearId": 115,
+    "academicYearCode": "KARATE-1790654114538"
+  },
+  {
+    "id": 88,
+    "code": "KARATE-1790654179903",
+    "name": "Karate Class 1790654179903",
+    "joinCode": "E25UQ6",
+    "qrCodeUrl": null,
+    "facultyId": 106,
+    "facultyName": "Karate Faculty 1790654179903",
+    "academicYearId": 119,
+    "academicYearCode": "KARATE-1790654179903"
+  },
+  {
+    "id": 89,
+    "code": "KARATEB-1790654179903",
+    "name": "Karate Class B 1790654179903",
+    "joinCode": "D2JYTZ",
+    "qrCodeUrl": null,
+    "facultyId": 106,
+    "facultyName": "Karate Faculty 1790654179903",
+    "academicYearId": 119,
+    "academicYearCode": "KARATE-1790654179903"
+  },
+  {
+    "id": 90,
+    "code": "KARATE-TC024-1790654184031",
+    "name": "L?p Karate 1790654184031",
+    "joinCode": "J26Q8G",
+    "qrCodeUrl": null,
+    "facultyId": 106,
+    "facultyName": "Karate Faculty 1790654179903",
+    "academicYearId": 119,
+    "academicYearCode": "KARATE-1790654179903"
+  },
+  {
+    "id": 91,
+    "code": "KARATE-TC025-1790654184047",
+    "name": "L?p Karate TC25",
+    "joinCode": "K62PMP",
+    "qrCodeUrl": null,
+    "facultyId": 106,
+    "facultyName": "Karate Faculty 1790654179903",
+    "academicYearId": 119,
+    "academicYearCode": "KARATE-1790654179903"
+  },
+  {
+    "id": 92,
+    "code": "KARATE-1790654239238",
+    "name": "Karate Class 1790654239238",
+    "joinCode": "Z6J27V",
+    "qrCodeUrl": null,
+    "facultyId": 109,
+    "facultyName": "Karate Faculty 1790654239238",
+    "academicYearId": 123,
+    "academicYearCode": "KARATE-1790654239238"
+  },
+  {
+    "id": 93,
+    "code": "KARATEB-1790654239238",
+    "name": "Karate Class B 1790654239238",
+    "joinCode": "T64RZ6",
+    "qrCodeUrl": null,
+    "facultyId": 109,
+    "facultyName": "Karate Faculty 1790654239238",
+    "academicYearId": 123,
+    "academicYearCode": "KARATE-1790654239238"
+  },
+  {
+    "id": 94,
+    "code": "KARATE-TC024-1790654243273",
+    "name": "L?p Karate 1790654243273",
+    "joinCode": "M9QRCU",
+    "qrCodeUrl": null,
+    "facultyId": 109,
+    "facultyName": "Karate Faculty 1790654239238",
+    "academicYearId": 123,
+    "academicYearCode": "KARATE-1790654239238"
+  },
+  {
+    "id": 95,
+    "code": "KARATE-TC025-1790654243300",
+    "name": "L?p Karate TC25",
+    "joinCode": "U62HMA",
+    "qrCodeUrl": null,
+    "facultyId": 109,
+    "facultyName": "Karate Faculty 1790654239238",
+    "academicYearId": 123,
+    "academicYearCode": "KARATE-1790654239238"
+  },
+  {
+    "id": 96,
+    "code": "KARATE-1790654567926",
+    "name": "Karate Class 1790654567926",
+    "joinCode": "S7D8DY",
+    "qrCodeUrl": null,
+    "facultyId": 112,
+    "facultyName": "Karate Faculty 1790654567926",
+    "academicYearId": 127,
+    "academicYearCode": "KARATE-1790654567926"
+  },
+  {
+    "id": 97,
+    "code": "KARATEB-1790654567926",
+    "name": "Karate Class B 1790654567926",
+    "joinCode": "Z5XK9A",
+    "qrCodeUrl": null,
+    "facultyId": 112,
+    "facultyName": "Karate Faculty 1790654567926",
+    "academicYearId": 127,
+    "academicYearCode": "KARATE-1790654567926"
+  },
+  {
+    "id": 98,
+    "code": "KARATE-TC024-1790654571340",
+    "name": "L?p Karate 1790654571340",
+    "joinCode": "K3D6QR",
+    "qrCodeUrl": null,
+    "facultyId": 112,
+    "facultyName": "Karate Faculty 1790654567926",
+    "academicYearId": 127,
+    "academicYearCode": "KARATE-1790654567926"
+  },
+  {
+    "id": 99,
+    "code": "KARATE-TC025-1790654571359",
+    "name": "L?p Karate TC25",
+    "joinCode": "C62TA4",
+    "qrCodeUrl": null,
+    "facultyId": 112,
+    "facultyName": "Karate Faculty 1790654567926",
+    "academicYearId": 127,
+    "academicYearCode": "KARATE-1790654567926"
+  },
+  {
+    "id": 100,
+    "code": "KARATE-1790655194901",
+    "name": "Karate Class 1790655194901",
+    "joinCode": "F4ASEV",
+    "qrCodeUrl": null,
+    "facultyId": 115,
+    "facultyName": "Karate Faculty 1790655194901",
+    "academicYearId": 131,
+    "academicYearCode": "KARATE-1790655194901"
+  },
+  {
+    "id": 101,
+    "code": "KARATEB-1790655194901",
+    "name": "Karate Class B 1790655194901",
+    "joinCode": "U56QGQ",
+    "qrCodeUrl": null,
+    "facultyId": 115,
+    "facultyName": "Karate Faculty 1790655194901",
+    "academicYearId": 131,
+    "academicYearCode": "KARATE-1790655194901"
+  }
+]
+ 
+11:13:20.350 [main] INFO com.intuit.karate -- [print] {
+  "id": 102,
+  "code": "KARATE-TC024-1790655200333",
+  "name": "L?p Karate 1790655200333",
+  "joinCode": "X9S53N",
+  "qrCodeUrl": null,
+  "facultyId": 115,
+  "facultyName": "Karate Faculty 1790655194901",
+  "academicYearId": 131,
+  "academicYearCode": "KARATE-1790655194901"
+}
+ 
+11:13:20.370 [main] INFO com.intuit.karate -- [print] {
+  "id": 103,
+  "code": "KARATE-TC025-1790655200355",
+  "name": "L?p Karate TC25",
+  "joinCode": "B9WCT8",
+  "qrCodeUrl": null,
+  "facultyId": 115,
+  "facultyName": "Karate Faculty 1790655194901",
+  "academicYearId": 131,
+  "academicYearCode": "KARATE-1790655194901"
+}
+ 
+11:13:20.383 [main] INFO com.intuit.karate -- [print] {
+  "id": 103,
+  "code": "KARATE-TC025-1790655200355",
+  "name": "L?p Karate TC25",
+  "joinCode": "V9CMFU",
+  "qrCodeUrl": null,
+  "facultyId": 115,
+  "facultyName": "Karate Faculty 1790655194901",
+  "academicYearId": 131,
+  "academicYearCode": "KARATE-1790655194901"
+}
+ 
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/admin-catalog.feature
+scenarios: 14 | passed: 14 | failed:  0 | time: 0.3799
+---------------------------------------------------------
+
+11:13:20.614 [main] INFO com.intuit.karate -- [print] {
+  "content": [
+    {
+      "id": 703,
+      "username": "39127793",
+      "email": "karate-tc026-1790655199459@example.test",
+      "fullName": "Karate TC26",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:13:20",
+      "classId": 100,
+      "className": "Karate Class 1790655194901"
+    },
+    {
+      "id": 702,
+      "username": "25297063",
+      "email": "karate-manager-a-1790655194901@example.test",
+      "fullName": "Karate Manager A",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "MANAGER",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:13:17",
+      "classId": 100,
+      "className": "Karate Class 1790655194901"
+    },
+    {
+      "id": 701,
+      "username": "77988025",
+      "email": "karate-b-1790655194901@example.test",
+      "fullName": "Karate Student B",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:13:16",
+      "classId": 100,
+      "className": "Karate Class 1790655194901"
+    },
+    {
+      "id": 700,
+      "username": "14708821",
+      "email": "karate-a-1790655194901@example.test",
+      "fullName": "Karate Student A",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:13:16",
+      "classId": 100,
+      "className": "Karate Class 1790655194901"
+    },
+    {
+      "id": 699,
+      "username": "10820701",
+      "email": "karate-tc055-1790654577469@example.test",
+      "fullName": "Karate TC55",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:58",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 698,
+      "username": "54663134",
+      "email": "karate-tc054-1790654576727@example.test",
+      "fullName": "Karate TC54",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:57",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 697,
+      "username": "21730618",
+      "email": "karate-tc053-1790654576301@example.test",
+      "fullName": "Karate TC53",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:56",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 696,
+      "username": "66337125",
+      "email": "karate-tc052-1790654576041@example.test",
+      "fullName": "Karate TC52",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:56",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 695,
+      "username": "86101350",
+      "email": "karate-tc051-1790654575844@example.test",
+      "fullName": "Karate TC51",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:56",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 694,
+      "username": "16475854",
+      "email": "karate-tc050-1790654575642@example.test",
+      "fullName": "Karate TC50",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:56",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 693,
+      "username": "25062599",
+      "email": "karate-tc049-1790654575436@example.test",
+      "fullName": "Karate TC49",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:56",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 690,
+      "username": "80035230",
+      "email": "karate-tc046-1790654574800@example.test",
+      "fullName": "Karate TC46",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:55",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 689,
+      "username": "91225707",
+      "email": "karate-tc045-1790654574477@example.test",
+      "fullName": "Karate TC45",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:55",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 692,
+      "username": "69438380",
+      "email": "karate-tc048-1790654575221@example.test",
+      "fullName": "Karate TC48",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:55",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 691,
+      "username": "70751635",
+      "email": "karate-tc047-1790654575019@example.test",
+      "fullName": "Karate TC47",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:55",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 688,
+      "username": "15372966",
+      "email": "karate-tc044-1790654573622@example.test",
+      "fullName": "Karate TC44",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:54",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 687,
+      "username": "93718321",
+      "email": "karate-tc043-1790654573389@example.test",
+      "fullName": "Karate TC43",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:53",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 686,
+      "username": "17948143",
+      "email": "karate-tc042-1790654573052@example.test",
+      "fullName": "Karate TC42",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:53",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 685,
+      "username": "81007327",
+      "email": "karate-tc034-1790654572358@example.test",
+      "fullName": "Karate TC34",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:52",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    },
+    {
+      "id": 684,
+      "username": "98459364",
+      "email": "karate-tc033-1790654572111@example.test",
+      "fullName": "Karate TC33",
+      "phone": null,
+      "avatarUrl": null,
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-29T11:02:52",
+      "classId": 96,
+      "className": "Karate Class 1790654567926"
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 20,
+    "sort": {
+      "empty": false,
+      "sorted": true,
+      "unsorted": false
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "last": false,
+  "totalElements": 653,
+  "totalPages": 33,
+  "first": true,
+  "size": 20,
+  "number": 0,
+  "sort": {
+    "empty": false,
+    "sorted": true,
+    "unsorted": false
+  },
+  "numberOfElements": 20,
+  "empty": false
+}
+ 
+11:13:20.771 [main] INFO com.intuit.karate -- [print] {
+  "id": 704,
+  "username": "68572573",
+  "email": "student-1790655200627@example.test",
+  "fullName": "Karate Student",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:20.7645723",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:20.886 [main] INFO com.intuit.karate -- [print] {
+  "id": 705,
+  "username": "87082518",
+  "email": "karate-tc029-1790655200777@example.test",
+  "fullName": "Karate TC29",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:20.8813976",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:20.898 [main] INFO com.intuit.karate -- [print] {
+  "id": 705,
+  "username": "87082518",
+  "email": "karate-tc029-1790655200777@example.test",
+  "fullName": "Karate TC29",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:21",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:20.992 [main] INFO com.intuit.karate -- [print] {
+  "id": 706,
+  "username": "27433200",
+  "email": "karate-tc030-1790655200903@example.test",
+  "fullName": "Karate TC30",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:20.9886133",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:21.004 [main] INFO com.intuit.karate -- [print] {
+  "id": 706,
+  "username": "27433200",
+  "email": "student-upd-1790655200903@example.test",
+  "fullName": "Karate Student Updated",
+  "phone": "0987654321",
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:21",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:21.011 [main] INFO com.intuit.karate -- [print] {
+  "id": 706,
+  "username": "27433200",
+  "email": "student-upd-1790655200903@example.test",
+  "fullName": "Karate Student Updated",
+  "phone": "0987654321",
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:21",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:21.114 [main] INFO com.intuit.karate -- [print] {
+  "id": 707,
+  "username": "18781738",
+  "email": "karate-tc031-1790655201016@example.test",
+  "fullName": "Karate TC31",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:21.1091658",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:21.131 [main] INFO com.intuit.karate -- [print]  
+11:13:21.144 [main] INFO com.intuit.karate -- [print] {
+  "id": 707,
+  "username": "18781738",
+  "email": "karate-tc031-1790655201016@example.test",
+  "fullName": "Karate TC31",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "LOCKED",
+  "createdAt": "2026-09-29T11:13:21",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:21.257 [main] INFO com.intuit.karate -- [print] {
+  "id": 708,
+  "username": "50599346",
+  "email": "karate-tc032-1790655201159@example.test",
+  "fullName": "Karate TC32",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:21.2521858",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:21.273 [main] INFO com.intuit.karate -- [print]  
+11:13:21.287 [main] INFO com.intuit.karate -- [print]  
+11:13:21.294 [main] INFO com.intuit.karate -- [print] {
+  "id": 708,
+  "username": "50599346",
+  "email": "karate-tc032-1790655201159@example.test",
+  "fullName": "Karate TC32",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:21",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:21.403 [main] INFO com.intuit.karate -- [print] {
+  "id": 709,
+  "username": "19903378",
+  "email": "karate-tc033-1790655201302@example.test",
+  "fullName": "Karate TC33",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:21.3988977",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:21.500 [main] INFO com.intuit.karate -- [print]  
+11:13:21.584 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDkiLCJ1c2VybmFtZSI6IjE5OTAzMzc4Iiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDEsImV4cCI6MTc5MDY1ODgwMX0.z-YJxJZaLPP2m45Mnd8zgnBKYT2Cp-fdZdpG46g6cru29R_0NKH_CSKuLo7WFl7XH_QuCiQ0OEKxX4Z7xQT7vQ",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MDkiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjAxLCJleHAiOjE3OTEyNjAwMDF9.Dfkps9IdyUOj787osKdrWgVShaJe5j5AB07huj9Jlk7QJXf0cCIGG-Gt3wSAJBk41B3siYGBbXaNcnedxbyj_g",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 709,
+    "username": "19903378",
+    "fullName": "Karate TC33",
+    "email": "karate-tc033-1790655201302@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:21.676 [main] INFO com.intuit.karate -- [print] {
+  "id": 710,
+  "username": "51514138",
+  "email": "karate-tc034-1790655201592@example.test",
+  "fullName": "Karate TC34",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:21.6694231",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:21.759 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTAiLCJ1c2VybmFtZSI6IjUxNTE0MTM4Iiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDEsImV4cCI6MTc5MDY1ODgwMX0.ZHLByr5f-tt3_UKJ6w3OWydg2uiyqwxHkk69mcR8_D7twkvy0pA97olzOux3KKJRtBkMjQZNTHuLgvVswYL0RA",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTAiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjAxLCJleHAiOjE3OTEyNjAwMDF9.XqtvowjZ2kwSP-4nryoZh8exrYq5EwOdBbEyeFPfpMF1kLCvtz0sHtz95RfmY7l7QgfDZbJSviMZhh9EJg-MjQ",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 710,
+    "username": "51514138",
+    "fullName": "Karate TC34",
+    "email": "karate-tc034-1790655201592@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:21.768 [main] INFO com.intuit.karate -- [print] {
+  "timestamp": "2026-09-29T04:13:21.767+00:00",
+  "status": 403,
+  "error": "Forbidden",
+  "path": "/admin/users/api"
+}
+ 
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/admin-users.feature
+scenarios:  8 | passed:  8 | failed:  0 | time: 1.1218
+---------------------------------------------------------
+
+11:13:22.207 [main] INFO com.intuit.karate -- [print] {
+  "content": [
+    {
+      "id": 130,
+      "name": "Karate Live 1790655194901",
+      "description": "Karate live check-in",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": 10.762622,
+      "longitude": 106.660172,
+      "checkinRadius": 100,
+      "startTime": "2026-09-29T10:13:16",
+      "endTime": "2026-09-29T13:13:16",
+      "registrationDeadline": "2026-09-29T12:13:16",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T11:13:17",
+      "semesterId": 113,
+      "semesterName": "Karate Semester 1790655194901",
+      "maxSlots": 100,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 129,
+      "name": "Karate Open 1790655194901",
+      "description": "Karate API test",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-01T11:13:16",
+      "endTime": "2026-10-01T13:13:16",
+      "registrationDeadline": "2026-09-30T11:13:16",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T11:13:16",
+      "semesterId": 113,
+      "semesterName": "Karate Semester 1790655194901",
+      "maxSlots": 100,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 128,
+      "name": "Karate Updated 1790654572851",
+      "description": "Updated",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-04T11:02:52",
+      "endTime": "2026-10-04T13:02:52",
+      "registrationDeadline": "2026-10-03T11:02:52",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T11:02:53",
+      "semesterId": 110,
+      "semesterName": "Karate Semester 1790654567926",
+      "maxSlots": 0,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 127,
+      "name": "Karate TC37 1790654572801",
+      "description": "Karate API test",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-04T11:02:52",
+      "endTime": "2026-10-04T13:02:52",
+      "registrationDeadline": "2026-10-03T11:02:52",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T11:02:53",
+      "semesterId": 110,
+      "semesterName": "Karate Semester 1790654567926",
+      "maxSlots": 0,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 126,
+      "name": "Karate Activity 1790654572755",
+      "description": "Karate activity",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-04T11:02:52",
+      "endTime": "2026-10-04T13:02:52",
+      "registrationDeadline": "2026-10-03T11:02:52",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T11:02:53",
+      "semesterId": 110,
+      "semesterName": "Karate Semester 1790654567926",
+      "maxSlots": 0,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 125,
+      "name": "Karate Live 1790654567926",
+      "description": "Karate live check-in",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": 10.762622,
+      "longitude": 106.660172,
+      "checkinRadius": 100,
+      "startTime": "2026-09-29T10:02:48",
+      "endTime": "2026-09-29T13:02:48",
+      "registrationDeadline": "2026-09-29T12:02:48",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T11:02:49",
+      "semesterId": 110,
+      "semesterName": "Karate Semester 1790654567926",
+      "maxSlots": 100,
+      "registeredCount": 12,
+      "checkedInCount": 5,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 124,
+      "name": "Karate Open 1790654567926",
+      "description": "Karate API test",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-01T11:02:48",
+      "endTime": "2026-10-01T13:02:48",
+      "registrationDeadline": "2026-09-30T11:02:48",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T11:02:49",
+      "semesterId": 110,
+      "semesterName": "Karate Semester 1790654567926",
+      "maxSlots": 150,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 123,
+      "name": "Karate Updated 1790654245265",
+      "description": "Updated",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-04T10:57:25",
+      "endTime": "2026-10-04T12:57:25",
+      "registrationDeadline": "2026-10-03T10:57:25",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T10:57:25",
+      "semesterId": 107,
+      "semesterName": "Karate Semester 1790654239238",
+      "maxSlots": 0,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 122,
+      "name": "Karate TC37 1790654245221",
+      "description": "Karate API test",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-04T10:57:25",
+      "endTime": "2026-10-04T12:57:25",
+      "registrationDeadline": "2026-10-03T10:57:25",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T10:57:25",
+      "semesterId": 107,
+      "semesterName": "Karate Semester 1790654239238",
+      "maxSlots": 0,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 121,
+      "name": "Karate Activity 1790654245191",
+      "description": "Karate activity",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-04T10:57:25",
+      "endTime": "2026-10-04T12:57:25",
+      "registrationDeadline": "2026-10-03T10:57:25",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T10:57:25",
+      "semesterId": 107,
+      "semesterName": "Karate Semester 1790654239238",
+      "maxSlots": 0,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 120,
+      "name": "Karate Live 1790654239238",
+      "description": "Karate live check-in",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": 10.762622,
+      "longitude": 106.660172,
+      "checkinRadius": 100,
+      "startTime": "2026-09-29T09:57:20",
+      "endTime": "2026-09-29T12:57:20",
+      "registrationDeadline": "2026-09-29T11:57:20",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T10:57:21",
+      "semesterId": 107,
+      "semesterName": "Karate Semester 1790654239238",
+      "maxSlots": 100,
+      "registeredCount": 12,
+      "checkedInCount": 5,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 119,
+      "name": "Karate Open 1790654239238",
+      "description": "Karate API test",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-01T10:57:20",
+      "endTime": "2026-10-01T12:57:20",
+      "registrationDeadline": "2026-09-30T10:57:20",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T10:57:20",
+      "semesterId": 107,
+      "semesterName": "Karate Semester 1790654239238",
+      "maxSlots": 150,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 116,
+      "name": "Karate Activity 1790654186043",
+      "description": "Karate activity",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-04T10:56:26",
+      "endTime": "2026-10-04T12:56:26",
+      "registrationDeadline": "2026-10-03T10:56:26",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T10:56:26",
+      "semesterId": 104,
+      "semesterName": "Karate Semester 1790654179903",
+      "maxSlots": 0,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 118,
+      "name": "Karate Updated 1790654186139",
+      "description": "Updated",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-04T10:56:26",
+      "endTime": "2026-10-04T12:56:26",
+      "registrationDeadline": "2026-10-03T10:56:26",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T10:56:26",
+      "semesterId": 104,
+      "semesterName": "Karate Semester 1790654179903",
+      "maxSlots": 0,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 117,
+      "name": "Karate TC37 1790654186082",
+      "description": "Karate API test",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-04T10:56:26",
+      "endTime": "2026-10-04T12:56:26",
+      "registrationDeadline": "2026-10-03T10:56:26",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T10:56:26",
+      "semesterId": 104,
+      "semesterName": "Karate Semester 1790654179903",
+      "maxSlots": 0,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 115,
+      "name": "Karate Live 1790654179903",
+      "description": "Karate live check-in",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": 10.762622,
+      "longitude": 106.660172,
+      "checkinRadius": 100,
+      "startTime": "2026-09-29T09:56:20",
+      "endTime": "2026-09-29T12:56:20",
+      "registrationDeadline": "2026-09-29T11:56:20",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T10:56:21",
+      "semesterId": 104,
+      "semesterName": "Karate Semester 1790654179903",
+      "maxSlots": 100,
+      "registeredCount": 10,
+      "checkedInCount": 3,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 114,
+      "name": "Karate Open 1790654179903",
+      "description": "Karate API test",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-01T10:56:20",
+      "endTime": "2026-10-01T12:56:20",
+      "registrationDeadline": "2026-09-30T10:56:20",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T10:56:21",
+      "semesterId": 104,
+      "semesterName": "Karate Semester 1790654179903",
+      "maxSlots": 150,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 113,
+      "name": "Karate Updated 1790654120380",
+      "description": "Updated",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-04T10:55:20",
+      "endTime": "2026-10-04T12:55:20",
+      "registrationDeadline": "2026-10-03T10:55:20",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T10:55:20",
+      "semesterId": 101,
+      "semesterName": "Karate Semester 1790654114538",
+      "maxSlots": 0,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 112,
+      "name": "Karate TC37 1790654120320",
+      "description": "Karate API test",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-04T10:55:20",
+      "endTime": "2026-10-04T12:55:20",
+      "registrationDeadline": "2026-10-03T10:55:20",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T10:55:20",
+      "semesterId": 101,
+      "semesterName": "Karate Semester 1790654114538",
+      "maxSlots": 0,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    },
+    {
+      "id": 111,
+      "name": "Karate Activity 1790654120292",
+      "description": "Karate activity",
+      "bannerUrl": null,
+      "location": "Campus",
+      "latitude": null,
+      "longitude": null,
+      "checkinRadius": null,
+      "startTime": "2026-10-04T10:55:20",
+      "endTime": "2026-10-04T12:55:20",
+      "registrationDeadline": "2026-10-03T10:55:20",
+      "scope": "SCHOOL",
+      "status": "OPEN",
+      "createdAt": "2026-09-29T10:55:20",
+      "semesterId": 101,
+      "semesterName": "Karate Semester 1790654114538",
+      "maxSlots": 0,
+      "registeredCount": 0,
+      "checkedInCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 20,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "last": false,
+  "totalElements": 121,
+  "totalPages": 7,
+  "first": true,
+  "size": 20,
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "numberOfElements": 20,
+  "empty": false
+}
+ 
+11:13:22.241 [main] INFO com.intuit.karate -- [print] {
+  "id": 131,
+  "name": "Karate Activity 1790655202218",
+  "description": "Karate activity",
+  "bannerUrl": null,
+  "location": "Campus",
+  "latitude": null,
+  "longitude": null,
+  "checkinRadius": null,
+  "startTime": "2026-10-04T11:13:22",
+  "endTime": "2026-10-04T13:13:22",
+  "registrationDeadline": "2026-10-03T11:13:22",
+  "scope": "SCHOOL",
+  "status": "OPEN",
+  "createdAt": "2026-09-29T11:13:22.2341646",
+  "semesterId": 113,
+  "semesterName": "Karate Semester 1790655194901",
+  "maxSlots": null,
+  "registeredCount": null,
+  "checkedInCount": null,
+  "isDeadlinePassed": null,
+  "isEnded": null
+}
+ 
+11:13:22.280 [main] INFO com.intuit.karate -- [print] {
+  "id": 132,
+  "name": "Karate TC37 1790655202248",
+  "description": "Karate API test",
+  "bannerUrl": null,
+  "location": "Campus",
+  "latitude": null,
+  "longitude": null,
+  "checkinRadius": null,
+  "startTime": "2026-10-04T11:13:22",
+  "endTime": "2026-10-04T13:13:22",
+  "registrationDeadline": "2026-10-03T11:13:22",
+  "scope": "SCHOOL",
+  "status": "OPEN",
+  "createdAt": "2026-09-29T11:13:22.2704893",
+  "semesterId": 113,
+  "semesterName": "Karate Semester 1790655194901",
+  "maxSlots": null,
+  "registeredCount": null,
+  "checkedInCount": null,
+  "isDeadlinePassed": null,
+  "isEnded": null
+}
+ 
+11:13:22.292 [main] INFO com.intuit.karate -- [print] {
+  "id": 132,
+  "name": "Karate TC37 1790655202248",
+  "description": "Karate API test",
+  "bannerUrl": null,
+  "location": "Campus",
+  "latitude": null,
+  "longitude": null,
+  "checkinRadius": null,
+  "startTime": "2026-10-04T11:13:22",
+  "endTime": "2026-10-04T13:13:22",
+  "registrationDeadline": "2026-10-03T11:13:22",
+  "scope": "SCHOOL",
+  "status": "OPEN",
+  "createdAt": "2026-09-29T11:13:22",
+  "semesterId": 113,
+  "semesterName": "Karate Semester 1790655194901",
+  "maxSlots": null,
+  "registeredCount": null,
+  "checkedInCount": null,
+  "isDeadlinePassed": null,
+  "isEnded": null
+}
+ 
+11:13:22.321 [main] INFO com.intuit.karate -- [print] {
+  "id": 133,
+  "name": "Karate TC38 1790655202296",
+  "description": "Karate API test",
+  "bannerUrl": null,
+  "location": "Campus",
+  "latitude": null,
+  "longitude": null,
+  "checkinRadius": null,
+  "startTime": "2026-10-04T11:13:22",
+  "endTime": "2026-10-04T13:13:22",
+  "registrationDeadline": "2026-10-03T11:13:22",
+  "scope": "SCHOOL",
+  "status": "OPEN",
+  "createdAt": "2026-09-29T11:13:22.3137023",
+  "semesterId": 113,
+  "semesterName": "Karate Semester 1790655194901",
+  "maxSlots": null,
+  "registeredCount": null,
+  "checkedInCount": null,
+  "isDeadlinePassed": null,
+  "isEnded": null
+}
+ 
+11:13:22.339 [main] INFO com.intuit.karate -- [print] {
+  "id": 133,
+  "name": "Karate Updated 1790655202296",
+  "description": "Updated",
+  "bannerUrl": null,
+  "location": "Campus",
+  "latitude": null,
+  "longitude": null,
+  "checkinRadius": null,
+  "startTime": "2026-10-04T11:13:22",
+  "endTime": "2026-10-04T13:13:22",
+  "registrationDeadline": "2026-10-03T11:13:22",
+  "scope": "SCHOOL",
+  "status": "OPEN",
+  "createdAt": "2026-09-29T11:13:22",
+  "semesterId": 113,
+  "semesterName": "Karate Semester 1790655194901",
+  "maxSlots": null,
+  "registeredCount": null,
+  "checkedInCount": null,
+  "isDeadlinePassed": null,
+  "isEnded": null
+}
+ 
+11:13:22.349 [main] INFO com.intuit.karate -- [print] {
+  "id": 133,
+  "name": "Karate Updated 1790655202296",
+  "description": "Updated",
+  "bannerUrl": null,
+  "location": "Campus",
+  "latitude": null,
+  "longitude": null,
+  "checkinRadius": null,
+  "startTime": "2026-10-04T11:13:22",
+  "endTime": "2026-10-04T13:13:22",
+  "registrationDeadline": "2026-10-03T11:13:22",
+  "scope": "SCHOOL",
+  "status": "OPEN",
+  "createdAt": "2026-09-29T11:13:22",
+  "semesterId": 113,
+  "semesterName": "Karate Semester 1790655194901",
+  "maxSlots": null,
+  "registeredCount": null,
+  "checkedInCount": null,
+  "isDeadlinePassed": null,
+  "isEnded": null
+}
+ 
+11:13:22.368 [main] INFO com.intuit.karate -- [print] {
+  "message": "D? li?u không h?p l?",
+  "errors": {
+    "name": "Tên ho?t ??ng không ???c ?? tr?ng"
+  },
+  "status": 400,
+  "timestamp": "2026-09-29T11:13:22.3662462"
+}
+ 
+11:13:22.405 [main] INFO com.intuit.karate -- [print] {
+  "id": 86,
+  "maxQuantity": 50,
+  "currentQuantity": 0,
+  "facultyId": null,
+  "facultyName": null,
+  "academicYearId": null,
+  "academicYearCode": null,
+  "classId": 101,
+  "className": "Karate Class B 1790655194901"
+}
+ 
+11:13:22.426 [main] INFO com.intuit.karate -- [print] [
+  {
+    "id": 84,
+    "maxQuantity": 100,
+    "currentQuantity": 0,
+    "facultyId": null,
+    "facultyName": null,
+    "academicYearId": null,
+    "academicYearCode": null,
+    "classId": 100,
+    "className": "Karate Class 1790655194901"
+  },
+  {
+    "id": 86,
+    "maxQuantity": 50,
+    "currentQuantity": 0,
+    "facultyId": null,
+    "facultyName": null,
+    "academicYearId": null,
+    "academicYearCode": null,
+    "classId": 101,
+    "className": "Karate Class B 1790655194901"
+  }
+]
+ 
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/activities.feature
+scenarios:  7 | passed:  7 | failed:  0 | time: 0.2389
+---------------------------------------------------------
+
+11:13:22.644 [main] INFO com.intuit.karate -- [print] {
+  "id": 711,
+  "username": "65452441",
+  "email": "karate-TC42-1790655202516@example.test",
+  "fullName": "Karate TC42",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:22.638798",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:22.758 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTEiLCJ1c2VybmFtZSI6IjY1NDUyNDQxIiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDIsImV4cCI6MTc5MDY1ODgwMn0.CNThLd1tarMMDOf36TLAYtNKEeTWUSixwxSzc5DY-5cSkro16ViPdxxAtYvbYOiuUhIoG-cZ3cIz-KuZeT9_wA",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTEiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjAyLCJleHAiOjE3OTEyNjAwMDJ9.AfY0BAXymPzIRimZzdIdGANRlVshUX91mIhpPm6RJzgpkoSPADq7zbLpiA6imwu9MeFQWxFdaphVk1cXRAvT-Q",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 711,
+    "username": "65452441",
+    "fullName": "Karate TC42",
+    "email": "karate-TC42-1790655202516@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:22.793 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng ký thành công!",
+  "registrationId": 318
+}
+ 
+11:13:22.813 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 318,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:22.843 [main] INFO com.intuit.karate -- [print] {
+  "message": "?ã ?i?m danh thành công cho Karate TC42"
+}
+ 
+11:13:22.866 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 318,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "ATTENDED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:23.041 [main] INFO com.intuit.karate -- [print] {
+  "id": 712,
+  "username": "54521498",
+  "email": "karate-TC43-1790655202889@example.test",
+  "fullName": "Karate TC43",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:23.0281718",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:23.156 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTIiLCJ1c2VybmFtZSI6IjU0NTIxNDk4Iiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDMsImV4cCI6MTc5MDY1ODgwM30.NX9uuiMRhvRXPbOAz5zyrSHYKD0J7f8FWAvMtqJ2XQN7kPgYLagY_AqaFe4iUE-KKoU8ARdlqBmpLZ36pAf7_A",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTIiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjAzLCJleHAiOjE3OTEyNjAwMDN9.A5S72NkSFnENBULyAG4qrnITLJ2TWsgEOCwcfVFyfwPyibwOEB_H9Yjmol-JBMvzY-8ARBd6wD0QUsEiuf_SMQ",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 712,
+    "username": "54521498",
+    "fullName": "Karate TC43",
+    "email": "karate-TC43-1790655202889@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:23.183 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng ký thành công!",
+  "registrationId": 319
+}
+ 
+11:13:23.193 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 319,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:23.213 [main] INFO com.intuit.karate -- [print] {
+  "content": [
+    {
+      "studentId": 711,
+      "evidenceUrl": null,
+      "studentCode": "65452441",
+      "studentName": "Karate TC42",
+      "registeredAt": "2026-09-29T11:13:23",
+      "id": 318,
+      "isApproved": null,
+      "rejectionReason": null,
+      "status": "ATTENDED"
+    },
+    {
+      "studentId": 712,
+      "evidenceUrl": null,
+      "studentCode": "54521498",
+      "studentName": "Karate TC43",
+      "registeredAt": "2026-09-29T11:13:23",
+      "id": 319,
+      "isApproved": null,
+      "rejectionReason": null,
+      "status": "REGISTERED"
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 20,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "last": true,
+  "totalElements": 2,
+  "totalPages": 1,
+  "first": true,
+  "size": 20,
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "numberOfElements": 2,
+  "empty": false
+}
+ 
+11:13:23.332 [main] INFO com.intuit.karate -- [print] {
+  "id": 713,
+  "username": "82387560",
+  "email": "karate-TC44-1790655203222@example.test",
+  "fullName": "Karate TC44",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:23.327021",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:23.414 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTMiLCJ1c2VybmFtZSI6IjgyMzg3NTYwIiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDMsImV4cCI6MTc5MDY1ODgwM30.xLu5gmQfnUet2m_Tg2TgmSl6JCI-qZE0QLgsviOZCQX3RExd8MgYnhLQupj3EKTXIlNW9B0ezBNbRRdXXoJi8A",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTMiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjAzLCJleHAiOjE3OTEyNjAwMDN9.22bt7Gnej9mH1bw-H2SPeyvnnHQy_6EPrneZjRCo5ihCwgME87Ejei3-2xtvFA-B6Don-n-8_m9do_0TzgdBJQ",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 713,
+    "username": "82387560",
+    "fullName": "Karate TC44",
+    "email": "karate-TC44-1790655203222@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:23.434 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng ký thành công!",
+  "registrationId": 320
+}
+ 
+11:13:23.444 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 320,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:24.051 [main] INFO com.intuit.karate -- [print] {
+  "message": "?ã duy?t và c?ng 5 ?i?m thành công"
+}
+ 
+11:13:24.063 [main] INFO com.intuit.karate -- [print] {
+  "status": 409,
+  "message": "Minh ch?ng này ?ã ???c x? lý",
+  "timestamp": "2026-09-29T11:13:24.0620155"
+}
+ 
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/manager.feature
+scenarios:  3 | passed:  3 | failed:  0 | time: 1.5094
+---------------------------------------------------------
+
+11:13:24.322 [main] INFO com.intuit.karate -- [print] {
+  "id": 714,
+  "username": "23234366",
+  "email": "karate-tc045-1790655204223@example.test",
+  "fullName": "Karate TC45",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:24.3179497",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:24.422 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTQiLCJ1c2VybmFtZSI6IjIzMjM0MzY2Iiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDQsImV4cCI6MTc5MDY1ODgwNH0.J45X8aNxrtrjQ8fToWypT0t5n5NbNL5Us_tMIaW4J-BbsPE3a39T8fve5GpEBcsstpeevtUqftwAc14RP0nQoQ",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTQiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjA0LCJleHAiOjE3OTEyNjAwMDR9.DrQY7-oqKLjsLCVGUUq-kfoOOz_WT9Hd9H88Louks2Q462BepN7oE13wsns1Z76nvSez7RPSguHjdtRFiDzlIw",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 714,
+    "username": "23234366",
+    "fullName": "Karate TC45",
+    "email": "karate-tc045-1790655204223@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:24.552 [main] INFO com.intuit.karate -- [print] {
+  "registeredActivityIds": [
+  ],
+  "activities": [
+    {
+      "id": 130,
+      "name": "Karate Live 1790655194901",
+      "description": "Karate live check-in",
+      "bannerUrl": null,
+      "location": "Campus",
+      "startTime": "29/09/2026 10:13",
+      "endTime": "29/09/2026 13:13",
+      "registrationDeadline": "29/09/2026 12:13",
+      "status": "OPEN",
+      "maxSlots": 100,
+      "registeredCount": 3,
+      "isDeadlinePassed": false,
+      "isEnded": false,
+      "isRegistered": false
+    },
+    {
+      "id": 129,
+      "name": "Karate Open 1790655194901",
+      "description": "Karate API test",
+      "bannerUrl": null,
+      "location": "Campus",
+      "startTime": "01/10/2026 11:13",
+      "endTime": "01/10/2026 13:13",
+      "registrationDeadline": "30/09/2026 11:13",
+      "status": "OPEN",
+      "maxSlots": 150,
+      "registeredCount": 0,
+      "isDeadlinePassed": false,
+      "isEnded": false,
+      "isRegistered": false
+    }
+  ],
+  "hasClass": true
+}
+ 
+11:13:24.651 [main] INFO com.intuit.karate -- [print] {
+  "id": 715,
+  "username": "30433412",
+  "email": "karate-TC46-1790655204557@example.test",
+  "fullName": "Karate TC46",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:24.6423036",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:24.735 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTUiLCJ1c2VybmFtZSI6IjMwNDMzNDEyIiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDQsImV4cCI6MTc5MDY1ODgwNH0.8OIpbIA7ZD_tn0RNde9oICIGl_ZwnBGIiCi5tWmTG8xhufVWLqHyY9MgNc1NsTHlR8TXU0iPiRgX8EqRcPX_Tg",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTUiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjA0LCJleHAiOjE3OTEyNjAwMDR9.gRkrJ5oXJVfbgWvMBFOU7MfYEbiXwfYYGTnluzmm9ZWpW_2eMJrktqGk0R0XdHoM_uXjHwpzACG9GuVK-OBYIQ",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 715,
+    "username": "30433412",
+    "fullName": "Karate TC46",
+    "email": "karate-TC46-1790655204557@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:24.755 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng ký thành công!",
+  "registrationId": 321
+}
+ 
+11:13:24.770 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 321,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:24.789 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 321,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:24.885 [main] INFO com.intuit.karate -- [print] {
+  "id": 716,
+  "username": "44211039",
+  "email": "karate-TC47-1790655204797@example.test",
+  "fullName": "Karate TC47",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:24.8793677",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:24.968 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTYiLCJ1c2VybmFtZSI6IjQ0MjExMDM5Iiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDQsImV4cCI6MTc5MDY1ODgwNH0.MTe1ytQMF4XS9lIUx8MoJV8EGiFMki6Rf1ykwfRt2oej4DpLWcEHaRJIlL6aVRIcqXMUXoHEPLhsSXoLX2vDew",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTYiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjA0LCJleHAiOjE3OTEyNjAwMDR9.F9dyCVM9ox23KQ-e0pbQDCHVWj8kTedCyeL041TLC5j7_j9eu3B3XIa_1PnTWme8SrawaZGHqN-TBwMBZgoGJA",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 716,
+    "username": "44211039",
+    "fullName": "Karate TC47",
+    "email": "karate-TC47-1790655204797@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:24.989 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng ký thành công!",
+  "registrationId": 322
+}
+ 
+11:13:25.002 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 322,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:25.018 [main] INFO com.intuit.karate -- [print] {
+  "status": 409,
+  "message": "B?n ?ã ??ng ký ho?t ??ng này r?i",
+  "timestamp": "2026-09-29T11:13:25.0154063"
+}
+ 
+11:13:25.114 [main] INFO com.intuit.karate -- [print] {
+  "id": 717,
+  "username": "55369047",
+  "email": "karate-TC48-1790655205023@example.test",
+  "fullName": "Karate TC48",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:25.1093961",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:25.196 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTciLCJ1c2VybmFtZSI6IjU1MzY5MDQ3Iiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDUsImV4cCI6MTc5MDY1ODgwNX0.SACUXeb_wpNuVuzeLOUeZ0uEq3Q1TZPVnS8vhOk4ycJKjxUUm5O2qRe0tcXODwhhz-uD8W-5zZinPPBteNi1mQ",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTciLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjA1LCJleHAiOjE3OTEyNjAwMDV9.FuIltIGkRaZxghoKDPa9ant20qemi48U5iwA2oZH8b2EQS4kcTraIZpcEHkHIKOuPa8u2ff63DZbqSReYQjYsQ",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 717,
+    "username": "55369047",
+    "fullName": "Karate TC48",
+    "email": "karate-TC48-1790655205023@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:25.218 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng ký thành công!",
+  "registrationId": 323
+}
+ 
+11:13:25.230 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 323,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:25.249 [main] INFO com.intuit.karate -- [print] {
+  "message": "?ã h?y ??ng ký thành công"
+}
+ 
+11:13:25.344 [main] INFO com.intuit.karate -- [print] {
+  "id": 718,
+  "username": "20470631",
+  "email": "karate-TC49-1790655205253@example.test",
+  "fullName": "Karate TC49",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:25.3397176",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:25.431 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTgiLCJ1c2VybmFtZSI6IjIwNDcwNjMxIiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDUsImV4cCI6MTc5MDY1ODgwNX0.sfVfCQI3sTZACC81c4B7u31lf1DaJPVWl6x0ZVTg88AtZDWIHAi0pTRi-8f15TNc5aEsBAOat0Od_FoXi52Lpw",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTgiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjA1LCJleHAiOjE3OTEyNjAwMDV9.HyYg6kwRqXonma-51Dx0raoOoIEcneLLnv_lajt-p7sia_Dx0jYSYJJBlpPe9-yoKF7dQa3kGVPG3Hoy-xezjA",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 718,
+    "username": "20470631",
+    "fullName": "Karate TC49",
+    "email": "karate-TC49-1790655205253@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:25.448 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng ký thành công!",
+  "registrationId": 324
+}
+ 
+11:13:25.457 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 324,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:25.469 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 324,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:25.564 [main] INFO com.intuit.karate -- [print] {
+  "id": 719,
+  "username": "11233350",
+  "email": "karate-TC50-1790655205475@example.test",
+  "fullName": "Karate TC50",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:25.5589826",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:25.648 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTkiLCJ1c2VybmFtZSI6IjExMjMzMzUwIiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDUsImV4cCI6MTc5MDY1ODgwNX0.3Fg9sGLVixG2iJLh_uvtqaAD2XhFbBHXIQfDg3CnMWvt-AXN_zMZKhC9P_NoOEWpvweo57tAonN9Wk8mNcec_w",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MTkiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjA1LCJleHAiOjE3OTEyNjAwMDV9.P8bgizbZYq8fsfWp9i32hDxO0vgLCVTQ8mTjkPU6TWsFzxygs8kL4hq0HKT77WX-9CXXDrXe26SmfNTvcy8hLA",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 719,
+    "username": "11233350",
+    "fullName": "Karate TC50",
+    "email": "karate-TC50-1790655205475@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:25.673 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng ký thành công!",
+  "registrationId": 325
+}
+ 
+11:13:25.684 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 325,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:25.698 [main] INFO com.intuit.karate -- [print] {
+  "status": 400,
+  "message": "Thi?u mã QR ho?c mã check-in",
+  "timestamp": "2026-09-29T11:13:25.6966474"
+}
+ 
+11:13:25.806 [main] INFO com.intuit.karate -- [print] {
+  "id": 720,
+  "username": "35248637",
+  "email": "karate-TC51-1790655205704@example.test",
+  "fullName": "Karate TC51",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:25.8018904",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:25.890 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MjAiLCJ1c2VybmFtZSI6IjM1MjQ4NjM3Iiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDUsImV4cCI6MTc5MDY1ODgwNX0.KKXyW6iNlMumhIxAYDsKJtzzlJvyQ5r8U53IYbVtFjAcoCa0RbfFJqS4RIg5f-_fKr4Kpg1XYHgWHxfk718BoQ",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MjAiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjA1LCJleHAiOjE3OTEyNjAwMDV9.Be3rm2rU3wcpfTALl3hr9WwLRN6kGpMDTu-aa43vlAArI9KjWnt2nucSrJMi1kIcTKqGPFglZxOamA_uPuboaQ",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 720,
+    "username": "35248637",
+    "fullName": "Karate TC51",
+    "email": "karate-TC51-1790655205704@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:25.912 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng ký thành công!",
+  "registrationId": 326
+}
+ 
+11:13:25.930 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 326,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:25.944 [main] INFO com.intuit.karate -- [print] {
+  "status": 400,
+  "message": "Mã QR ho?c mã check-in không h?p l? ho?c ?ã h?t h?n",
+  "timestamp": "2026-09-29T11:13:25.9421357"
+}
+ 
+11:13:26.042 [main] INFO com.intuit.karate -- [print] {
+  "id": 721,
+  "username": "98374340",
+  "email": "karate-TC52-1790655205948@example.test",
+  "fullName": "Karate TC52",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:26.0348149",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:26.146 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MjEiLCJ1c2VybmFtZSI6Ijk4Mzc0MzQwIiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDYsImV4cCI6MTc5MDY1ODgwNn0.ySdhVUBzPVCasOarmzobv7kNgJ-GTSsdBcRokYpZxs1EwQowy5CE9ahAytChD494Ra8EWlbcdbd7M58ui-JZNw",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MjEiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjA2LCJleHAiOjE3OTEyNjAwMDZ9.z6plWhVtxNKCZ0IYuG2ytqWYorvnf02grMuZLiHDnV1E8kLGnR76dxzMPmdoSIIxOVwcn4xPm_aBCLw3azaxFA",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 721,
+    "username": "98374340",
+    "fullName": "Karate TC52",
+    "email": "karate-TC52-1790655205948@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:26.168 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng ký thành công!",
+  "registrationId": 327
+}
+ 
+11:13:26.179 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 327,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:26.196 [main] INFO com.intuit.karate -- [print] {
+  "token": "R1sORBoeMcdb2khaTeU0fTuQWx5LOfrbP9sc0gOJINs",
+  "checkinCode": "V3995S",
+  "activityId": 130,
+  "classId": 100,
+  "checkinUrl": "http://127.0.0.1:8080/student/checkin/130?classId=100&token=R1sORBoeMcdb2khaTeU0fTuQWx5LOfrbP9sc0gOJINs",
+  "expiresAt": 1790655240000,
+  "secondsRemaining": 34,
+  "interval": 60
+}
+ 
+11:13:26.224 [main] INFO com.intuit.karate -- [print] {
+  "activityName": "Karate Live 1790655194901",
+  "message": "Check-in thành công! C?m ?n b?n ?ã tham gia."
+}
+ 
+11:13:26.321 [main] INFO com.intuit.karate -- [print] {
+  "id": 722,
+  "username": "96479593",
+  "email": "karate-TC53-1790655206228@example.test",
+  "fullName": "Karate TC53",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:26.3138807",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:26.408 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MjIiLCJ1c2VybmFtZSI6Ijk2NDc5NTkzIiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDYsImV4cCI6MTc5MDY1ODgwNn0.k3b1j12eM5iy58XJsiTN5RiXCd_4ybjyIlUgWC_PowqToqUBN69X-btaImlkM0M73oS_FkZl6Er8f7EkWY0cXQ",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MjIiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjA2LCJleHAiOjE3OTEyNjAwMDZ9.6HnuYahenU3glDmIPbc_N8PgqVw8MV6jL6ojq2z4WvKgE-BqaZ0C6yirrQngTOZxAjb1FBePC9jYyLfao5VrWg",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 722,
+    "username": "96479593",
+    "fullName": "Karate TC53",
+    "email": "karate-TC53-1790655206228@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:26.430 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng ký thành công!",
+  "registrationId": 328
+}
+ 
+11:13:26.443 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 328,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:26.462 [main] INFO com.intuit.karate -- [print] {
+  "token": "R1sORBoeMcdb2khaTeU0fTuQWx5LOfrbP9sc0gOJINs",
+  "checkinCode": "V3995S",
+  "activityId": 130,
+  "classId": 100,
+  "checkinUrl": "http://127.0.0.1:8080/student/checkin/130?classId=100&token=R1sORBoeMcdb2khaTeU0fTuQWx5LOfrbP9sc0gOJINs",
+  "expiresAt": 1790655240000,
+  "secondsRemaining": 34,
+  "interval": 60
+}
+ 
+11:13:26.478 [main] INFO com.intuit.karate -- [print] {
+  "status": 400,
+  "message": "B?n ?ang ? ngoài ph?m vi check-in",
+  "timestamp": "2026-09-29T11:13:26.4770672"
+}
+ 
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/student.feature
+scenarios:  9 | passed:  9 | failed:  0 | time: 2.2052
+---------------------------------------------------------
+
+11:13:27.026 [main] INFO com.intuit.karate -- [print] {
+  "id": 723,
+  "username": "86994360",
+  "email": "karate-TC54-1790655206888@example.test",
+  "fullName": "Karate TC54",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:27.0172225",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:27.120 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MjMiLCJ1c2VybmFtZSI6Ijg2OTk0MzYwIiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDcsImV4cCI6MTc5MDY1ODgwN30.t-HaQkaz0EQrij-MJ92Xr_JKkRwchIEx90SheOfQySXJKq6I2BKpcH-z5Ofy93c4ays7bITsxq_jf9AHjWmJ_A",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MjMiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjA3LCJleHAiOjE3OTEyNjAwMDd9.BciDqKL9GkEt2yPm_XazpL__aPPNlwZHo3uZKl8ug1yfyjl46t1TWPMPaOzv-zVMEvg2OPSy8rJ40SbfwYEQhQ",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 723,
+    "username": "86994360",
+    "fullName": "Karate TC54",
+    "email": "karate-TC54-1790655206888@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:27.138 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng ký thành công!",
+  "registrationId": 329
+}
+ 
+11:13:27.151 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 329,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:27.570 [main] INFO com.intuit.karate -- [print] {
+  "message": "?ã n?p 1 ?nh minh ch?ng! Vui lòng ch? xác nh?n t? qu?n lý l?p."
+}
+ 
+11:13:27.686 [main] INFO com.intuit.karate -- [print] {
+  "id": 724,
+  "username": "30418325",
+  "email": "karate-TC55-1790655207578@example.test",
+  "fullName": "Karate TC55",
+  "phone": null,
+  "avatarUrl": null,
+  "role": "STUDENT",
+  "status": "ACTIVE",
+  "createdAt": "2026-09-29T11:13:27.6796524",
+  "classId": 100,
+  "className": "Karate Class 1790655194901"
+}
+ 
+11:13:27.777 [main] INFO com.intuit.karate -- [print] {
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MjQiLCJ1c2VybmFtZSI6IjMwNDE4MzI1Iiwicm9sZSI6IlNUVURFTlQiLCJ0eXBlIjoiYWNjZXNzIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTA2NTUyMDcsImV4cCI6MTc5MDY1ODgwN30.GCb3LMmuxGhe1wI8i-hkINIbX2LONlmJYQPevfkO6YLejC_xp87VmrgeSJFhyo5HI43GRiC-ffrQGzgBW5Dh5A",
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3MjQiLCJ0eXBlIjoicmVmcmVzaCIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzkwNjU1MjA3LCJleHAiOjE3OTEyNjAwMDd9.uckA84ETTAwXfhFwffJZ5SuHH9hJh0mehMlrgYeBejumEt-DZa7zz6wBvQih8Qr9LGvOWW4D0gVKRQbEUgauCA",
+  "tokenType": "Bearer",
+  "expiresIn": 3600,
+  "user": {
+    "id": 724,
+    "username": "30418325",
+    "fullName": "Karate TC55",
+    "email": "karate-TC55-1790655207578@example.test",
+    "phone": null,
+    "role": "STUDENT",
+    "avatarUrl": null,
+    "provider": "LOCAL",
+    "status": "ACTIVE"
+  }
+}
+ 
+11:13:27.798 [main] INFO com.intuit.karate -- [print] {
+  "message": "??ng ký thành công!",
+  "registrationId": 330
+}
+ 
+11:13:27.810 [main] INFO com.intuit.karate -- [print] {
+  "hasClass": true,
+  "registrations": [
+    {
+      "id": 330,
+      "activity": {
+        "id": 130,
+        "name": "Karate Live 1790655194901",
+        "location": "Campus",
+        "startTime": "29/09/2026 10:13"
+      },
+      "registeredAt": "29/09/2026 11:13",
+      "status": "REGISTERED",
+      "evidenceUrl": null,
+      "isApproved": null,
+      "rejectionReason": null
+    }
+  ]
+}
+ 
+11:13:28.128 [main] INFO com.intuit.karate -- [print] {
+  "status": 400,
+  "message": "T?i ?a 3 ?nh",
+  "timestamp": "2026-09-29T11:13:28.1220961"
+}
+ 
+---------------------------------------------------------
+feature: classpath:com/example/uniactivity/karate/evidence.feature
+scenarios:  2 | passed:  2 | failed:  0 | time: 1.2293
+---------------------------------------------------------
+
+Karate version: 1.4.1
+======================================================
+elapsed:  14.86 | threads:    1 | thread time: 7.94 
+features:     8 | skipped:    0 | efficiency: 0.53
+scenarios:   55 | passed:    55 | failed: 0
+======================================================
+
+HTML report: (paste into browser to view) | Karate version: 1.4.1
+file:///D:/PROJECT/UniActivity/UniActivity_BE/target/karate-reports/karate-summary.html
+===================================================================
+
+[INFO] Tests run: 55, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.24 s -- in com.example.uniactivity.karate.ApiTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 55, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.318 s
+[INFO] Finished at: 2026-09-29T11:13:28+07:00
+[INFO] ------------------------------------------------------------------------
