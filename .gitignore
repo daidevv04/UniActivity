@@ -4,3 +4,12 @@
 **/target/
 **/karate-reports/
 UniActivity_FE/dist/
+
+# Benchmark runtime artifacts
+UniActivity_BE/target/benchmark-*
+UniActivity_BE/target/newman-benchmark/
+
+# Local tooling installed only to run benchmark collections
+docs/benchmark/node_modules/
+docs/benchmark/npm-debug.log*
+docs/benchmark/yarn-error.log*
