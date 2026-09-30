@@ -5,6 +5,9 @@
 **/karate-reports/
 UniActivity_FE/dist/
 
+# Local thesis and benchmark documentation
+/docs/
+
 # Benchmark runtime artifacts
 UniActivity_BE/target/benchmark-*
 UniActivity_BE/target/newman-benchmark/
