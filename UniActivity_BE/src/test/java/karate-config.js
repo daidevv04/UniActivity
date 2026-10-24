@@ -5,12 +5,10 @@ function fn() {
     admin: { username: 'admin', password: 'admin123' },
     test: {
       suffix: suffix,
-      password: 'Karate123@',
-      resetPassword: 'Karate456@',
-      studentAEmail: 'karate-a-' + suffix + '@example.test',
-      studentBEmail: 'karate-b-' + suffix + '@example.test'
+      password: 'Karate123@'
     }
   };
   var setup = karate.callSingle('classpath:com/example/uniactivity/karate/helpers/setup.feature', values);
-  return { config: values, baseUrl: values.baseUrl, admin: values.admin, test: values.test, fixture: setup.fixture };
+  return { baseUrl: values.baseUrl, admin: values.admin, test: values.test, fixture: setup.fixture };
 }
+

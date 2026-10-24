@@ -1,83 +1,76 @@
-Feature: Admin quản lý người dùng (TC-027 đến TC-034)
+Feature: Người dùng và phân quyền (TC-19 đến TC-24)
 
   Background:
     * url baseUrl
     * configure headers = { Authorization: '#("Bearer " + fixture.adminToken)' }
 
-  Scenario: TC-027 Danh sách user phân trang
+  Scenario: TC-19 Tạo sinh viên tự sinh mã
+    * def email = 'karate-u19-' + test.suffix + '@example.test'
+    Given path '/admin/users/api'
+    And request { email: '#(email)', fullName: 'Karate User 19', password: '#(test.password)', role: 'STUDENT', classId: '#(fixture.classAId)' }
+    When method post
+    Then status 200
+    * match response.id == '#number'
+    * match response.username == '#regex ^[0-9]{8}$'
+    * match response.role == 'STUDENT'
+    * match response.status == 'ACTIVE'
+    * match response.email == email
+
+  Scenario: TC-20 Danh sách người dùng phân trang
     Given path '/admin/users/api'
     And param page = 0
     And param size = 20
     When method get
     Then status 200
-    * print response
+    * match response.content == '#array'
+    * match response.totalElements == '#number'
+    * match response.size == 20
 
-  Scenario: TC-028 Tạo Student
-    Given path '/admin/users/api'
-    And request { email: '#("student-" + config.test.suffix + "@example.test")', fullName: 'Karate Student', password: '#(config.test.password)', role: 'STUDENT', classId: '#(fixture.classAId)' }
-    When method post
-    Then status 200
-    * print response
-
-  Scenario: TC-029 Xem user vừa tạo
-    * def created = call read('helpers/create-student.feature') { adminToken: '#(fixture.adminToken)', email: '#("karate-tc029-" + config.test.suffix + "@example.test")', fullName: 'Karate TC29', classId: '#(fixture.classAId)' }
+  Scenario: TC-21 Cập nhật người dùng
+    * def created = call read('helpers/create-user.feature') { adminToken: '#(fixture.adminToken)', email: '#("karate-u21-" + test.suffix + "@example.test")', fullName: 'Karate User 21', classId: '#(fixture.classAId)' }
     Given path '/admin/users/api', created.id
-    When method get
-    Then status 200
-    * print response
-
-  Scenario: TC-030 Cập nhật user
-    * def created = call read('helpers/create-student.feature') { adminToken: '#(fixture.adminToken)', email: '#("karate-tc030-" + config.test.suffix + "@example.test")', fullName: 'Karate TC30', classId: '#(fixture.classAId)' }
-    Given path '/admin/users/api', created.id
-    And request { email: '#("student-upd-" + config.test.suffix + "@example.test")', fullName: 'Karate Student Updated', phone: '0987654321', role: 'STUDENT', classId: '#(fixture.classAId)' }
+    And request { email: '#("karate-u21-updated-" + test.suffix + "@example.test")', fullName: 'Karate User 21 Updated', phone: '0987654321', role: 'STUDENT', classId: '#(fixture.classAId)' }
     When method put
     Then status 200
-    * print response
     Given path '/admin/users/api', created.id
     When method get
     Then status 200
-    * print response
+    * match response.fullName == 'Karate User 21 Updated'
+    * match response.phone == '0987654321'
 
-  Scenario: TC-031 Khóa user ACTIVE
-    * def created = call read('helpers/create-student.feature') { adminToken: '#(fixture.adminToken)', email: '#("karate-tc031-" + config.test.suffix + "@example.test")', fullName: 'Karate TC31', classId: '#(fixture.classAId)' }
+  Scenario: TC-22 Khóa tài khoản
+    * def created = call read('helpers/create-user.feature') { adminToken: '#(fixture.adminToken)', email: '#("karate-u22-" + test.suffix + "@example.test")', fullName: 'Karate User 22', classId: '#(fixture.classAId)' }
     Given path '/admin/users/api', created.id, 'toggle-status'
     When method post
     Then status 200
-    * print response
     Given path '/admin/users/api', created.id
     When method get
     Then status 200
-    * print response
-
-  Scenario: TC-032 Mở user LOCKED
-    * def created = call read('helpers/create-student.feature') { adminToken: '#(fixture.adminToken)', email: '#("karate-tc032-" + config.test.suffix + "@example.test")', fullName: 'Karate TC32', classId: '#(fixture.classAId)' }
-    Given path '/admin/users/api', created.id, 'toggle-status'
+    * match response.status == 'LOCKED'
+    Given path '/api/auth/login'
+    * configure headers = {}
+    And request { username: '#(created.username)', password: '#(test.password)' }
     When method post
-    Then status 200
-    * print response
-    Given path '/admin/users/api', created.id, 'toggle-status'
-    When method post
-    Then status 200
-    * print response
-    Given path '/admin/users/api', created.id
-    When method get
-    Then status 200
-    * print response
+    Then status 401
+    * match response.error == '#string'
 
-  Scenario: TC-033 Admin reset mật khẩu
-    * def created = call read('helpers/create-student.feature') { adminToken: '#(fixture.adminToken)', email: '#("karate-tc033-" + config.test.suffix + "@example.test")', fullName: 'Karate TC33', classId: '#(fixture.classAId)' }
+  Scenario: TC-23 Admin reset mật khẩu và vô hiệu phiên cũ
+    * def created = call read('helpers/create-user.feature') { adminToken: '#(fixture.adminToken)', email: '#("karate-u23-" + test.suffix + "@example.test")', fullName: 'Karate User 23', classId: '#(fixture.classAId)' }
+    * def oldLogin = call read('helpers/login.feature') { username: '#(created.username)', password: '#(test.password)' }
     Given path '/admin/users/api', created.id, 'reset-password'
-    And request { newPassword: '#(config.test.resetPassword)' }
+    * configure headers = { Authorization: '#("Bearer " + fixture.adminToken)' }
+    And request { newPassword: 'Karate456@' }
     When method post
     Then status 200
-    * print response
-    * def login = call read('helpers/login.feature') { username: '#(created.username)', password: '#(config.test.resetPassword)' }
+    * def newLogin = call read('helpers/login.feature') { username: '#(created.username)', password: 'Karate456@' }
+    * assert newLogin.accessToken != null
+    Given path '/api/auth/me'
+    * configure headers = { Authorization: '#("Bearer " + oldLogin.accessToken)' }
+    When method get
+    Then status 401
 
-  Scenario: TC-034 Student không vào Admin API
-    * def student = call read('helpers/create-student.feature') { adminToken: '#(fixture.adminToken)', email: '#("karate-tc034-" + config.test.suffix + "@example.test")', fullName: 'Karate TC34', classId: '#(fixture.classAId)' }
-    * def login = call read('helpers/login.feature') { username: '#(student.username)', password: '#(config.test.password)' }
+  Scenario: TC-24 Chặn sinh viên gọi API quản trị
     Given path '/admin/users/api'
-    * configure headers = { Authorization: '#("Bearer " + login.accessToken)' }
+    * configure headers = { Authorization: '#("Bearer " + fixture.studentAToken)' }
     When method get
     Then status 403
-    * print response
